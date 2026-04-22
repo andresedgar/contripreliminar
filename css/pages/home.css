@@ -6,7 +6,61 @@
    HERO SECTION
    ───────────────────────────────────────── */
 .hero {
-  padding: 40px 0 48px;
+  background: linear-gradient(135deg, var(--color-secondary) 0%, #0f1829 100%);
+  padding: 48px 0 56px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle pattern overlay for visual texture */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 20% 80%, rgba(251, 166, 26, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(251, 166, 26, 0.05) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+.hero > .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Hero card adjustments for dark background */
+.hero .hero-card {
+  background: var(--color-surface);
+  border: none;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+}
+
+.hero .hero-card__featured {
+  border-right: none;
+}
+
+.hero .hero-card__secondary {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+  gap: var(--spacing-sm);
+}
+
+.hero .hero-card__secondary-item {
+  background: var(--color-surface);
+  border-radius: var(--radius-sm);
+  border-bottom: none;
+  overflow: hidden;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.hero .hero-card__secondary-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  background: var(--color-surface);
 }
 
 .hero-card__featured-title a {
@@ -324,7 +378,11 @@
 
 @media (max-width: 768px) {
   .hero {
-    padding: 24px 0 32px;
+    padding: 32px 0 40px;
+  }
+
+  .hero .hero-card__secondary {
+    padding: var(--spacing-sm);
   }
 
   .opinion-grid {
