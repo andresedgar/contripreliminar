@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Calculadora de IVA gratis. Calcula el IVA al 16% o tasa fronteriza del 8%. Agrega o desglosa el IVA de cualquier monto en pesos mexicanos.">
+  <title>Calculadora de IVA — El Contribuyente</title>
+
+  <link rel="icon" type="image/png" href="assets/logo-contribuyente.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/calculadoras.css">
+</head>
+<body>
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="topbar__date">
+      <span class="topbar__date-text">Lunes, 21 de abril de 2025</span>
+    </div>
+    <div class="topbar__ticker">
+      <div class="topbar__ticker-track">
+        <span class="topbar__ticker-item">
+          <span class="topbar__ticker-label">USD/MXN</span>
+          <span class="topbar__ticker-value">17.2340</span>
+          <span class="topbar__ticker-up">&#9650;</span>
+        </span>
+        <span class="topbar__ticker-item">
+          <span class="topbar__ticker-label">EUR/MXN</span>
+          <span class="topbar__ticker-value">18.9120</span>
+          <span class="topbar__ticker-down">&#9660;</span>
+        </span>
+        <span class="topbar__ticker-item">
+          <span class="topbar__ticker-label">UDI</span>
+          <span class="topbar__ticker-value">8.1234</span>
+          <span class="topbar__ticker-up">&#9650;</span>
+        </span>
+        <span class="topbar__ticker-item">
+          <span class="topbar__ticker-label">TIIE 28D</span>
+          <span class="topbar__ticker-value">10.50%</span>
+        </span>
+      </div>
+    </div>
+    <div class="topbar__live">
+      <span class="topbar__live-text">En vivo</span>
+      <div class="topbar__live-dot"></div>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__logo">
+        <img src="assets/logo-contribuyente.png" alt="El Contribuyente">
+      </a>
+      <nav class="navbar__nav">
+        <a href="cursos.html" class="navbar__link">Capacitacion</a>
+        <a href="categoria.html" class="navbar__link">Ultima hora</a>
+        <a href="categoria.html?cat=sat" class="navbar__link">SAT</a>
+        <a href="categoria.html?cat=impuestos" class="navbar__link">Impuestos</a>
+        <a href="categoria.html?cat=finanzas" class="navbar__link">Finanzas Personales</a>
+        <a href="calculadoras.html" class="navbar__link navbar__link--highlight">Calculadoras Fiscales</a>
+      </nav>
+      <div class="navbar__actions">
+        <div class="navbar__search">
+          <input type="text" class="navbar__search-input" placeholder="Buscar noticias...">
+          <button class="navbar__search-btn" aria-label="Buscar">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+          </button>
+        </div>
+        <a href="index.html#newsletter" class="navbar__cta">Suscribirme gratis</a>
+      </div>
+      <button class="navbar__toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!-- BREADCRUMB -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <div class="breadcrumb__inner">
+      <a href="index.html" class="breadcrumb__link">Inicio</a>
+      <span class="breadcrumb__separator">›</span>
+      <a href="calculadoras.html" class="breadcrumb__link">Calculadoras Fiscales</a>
+      <span class="breadcrumb__separator">›</span>
+      <span class="breadcrumb__current">Calculadora de IVA</span>
+    </div>
+  </nav>
+
+  <main class="calculadora-page">
+    <div class="container">
+      <div class="calculadora-layout">
+        <!-- Main Content -->
+        <div class="calculadora-main">
+          <!-- Calculator Header -->
+          <header class="calculadora-header">
+            <div class="calculadora-header__badge">
+              <span class="badge badge--impuestos">IVA</span>
+            </div>
+            <h1 class="calculadora-header__title">Calculadora de IVA</h1>
+            <p class="calculadora-header__desc">Calcula el IVA aplicable a tus operaciones. Aplica para la tasa general del 16% y la tasa fronteriza del 8% en la region fronteriza norte de Mexico.</p>
+          </header>
+
+          <!-- Calculator Form -->
+          <div class="calculator">
+            <div class="calculator__form">
+              <!-- Tipo de operacion -->
+              <div class="calculator__field">
+                <label class="calculator__label">Tipo de operacion</label>
+                <div class="calculator__tabs" role="tablist">
+                  <button type="button" class="calculator__tab calculator__tab--active" data-tipo="agregar" role="tab" aria-selected="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                      <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+                    </svg>
+                    Agregar IVA
+                  </button>
+                  <button type="button" class="calculator__tab" data-tipo="desglosar" role="tab" aria-selected="false">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                      <line x1="5" y1="12" x2="19" y2="12"/>
+                    </svg>
+                    Desglosar IVA
+                  </button>
+                </div>
+                <p class="calculator__hint" id="tipo-hint">Calcular precio final con IVA incluido</p>
+              </div>
+
+              <!-- Tasa -->
+              <div class="calculator__field">
+                <label class="calculator__label">Tasa de IVA</label>
+                <div class="calculator__radio-group">
+                  <label class="calculator__radio">
+                    <input type="radio" name="tasa" value="16" checked>
+                    <span class="calculator__radio-box"></span>
+                    <span class="calculator__radio-content">
+                      <span class="calculator__radio-title">16%</span>
+                      <span class="calculator__radio-desc">Tasa general</span>
+                    </span>
+                  </label>
+                  <label class="calculator__radio">
+                    <input type="radio" name="tasa" value="8">
+                    <span class="calculator__radio-box"></span>
+                    <span class="calculator__radio-content">
+                      <span class="calculator__radio-title">8%</span>
+                      <span class="calculator__radio-desc">Region fronteriza norte</span>
+                    </span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Monto -->
+              <div class="calculator__field">
+                <label class="calculator__label" for="monto">Monto (MXN)</label>
+                <div class="calculator__input-wrapper">
+                  <span class="calculator__input-prefix">$</span>
+                  <input
+                    type="text"
+                    id="monto"
+                    class="calculator__input"
+                    placeholder="0.00"
+                    inputmode="decimal"
+                    autocomplete="off"
+                  >
+                </div>
+                <p class="calculator__error" id="monto-error" hidden>Ingresa un monto valido mayor a 0</p>
+              </div>
+
+              <!-- Submit -->
+              <button type="button" class="calculator__submit" id="calcular-btn">
+                Calcular
+              </button>
+            </div>
+
+            <!-- Results Panel -->
+            <div class="calculator__results" id="results" hidden>
+              <div class="calculator__results-header">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                  <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                  <polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+                <span>Resultado del calculo</span>
+              </div>
+              <div class="calculator__results-body">
+                <div class="calculator__result-row">
+                  <span class="calculator__result-label">Monto sin IVA</span>
+                  <span class="calculator__result-value" id="result-sin-iva">$0.00</span>
+                </div>
+                <div class="calculator__result-row">
+                  <span class="calculator__result-label">IVA (<span id="result-tasa">16</span>%)</span>
+                  <span class="calculator__result-value" id="result-iva">$0.00</span>
+                </div>
+                <div class="calculator__result-row calculator__result-row--total">
+                  <span class="calculator__result-label">Total con IVA</span>
+                  <span class="calculator__result-value calculator__result-value--total" id="result-total">$0.00</span>
+                </div>
+              </div>
+              <button type="button" class="calculator__clear" id="limpiar-btn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                  <path d="M3 6h18M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"/>
+                </svg>
+                Limpiar / Nueva consulta
+              </button>
+            </div>
+          </div>
+
+          <!-- Informational Section -->
+          <section class="calculadora-info">
+            <h2 class="calculadora-info__title">Como funciona el IVA en Mexico?</h2>
+
+            <div class="calculadora-info__content">
+              <p>El <strong>Impuesto al Valor Agregado (IVA)</strong> es un impuesto indirecto que grava el consumo de bienes y servicios en Mexico. Esta regulado por la <strong>Ley del Impuesto al Valor Agregado (LIVA)</strong> y es uno de los principales impuestos del sistema tributario mexicano.</p>
+
+              <h3>Tasas vigentes del IVA</h3>
+              <p>Actualmente existen dos tasas de IVA en Mexico:</p>
+              <ul>
+                <li><strong>Tasa general del 16%:</strong> Aplica a la mayoria de los bienes y servicios en todo el territorio nacional.</li>
+                <li><strong>Tasa del 8%:</strong> Aplica exclusivamente en la <strong>region fronteriza norte</strong>, que comprende los municipios ubicados a lo largo de la linea divisoria con Estados Unidos, asi como algunos municipios de Baja California, Baja California Sur, Sonora y Quintana Roo.</li>
+              </ul>
+
+              <h3>Operaciones exentas y tasa 0%</h3>
+              <p>La LIVA tambien contempla operaciones que no causan IVA:</p>
+              <ul>
+                <li><strong>Tasa 0%:</strong> Aplica a alimentos basicos no procesados, medicinas de patente, exportaciones de bienes y servicios, y libros, periodicos y revistas.</li>
+                <li><strong>Operaciones exentas:</strong> Incluyen servicios medicos, educacion, arrendamiento de casa habitacion, y servicios financieros, entre otros.</li>
+              </ul>
+
+              <h3>Como se calcula el IVA?</h3>
+              <p>Para <strong>agregar IVA</strong> a un precio sin impuesto, se multiplica el monto por la tasa correspondiente (0.16 o 0.08) y se suma al precio original.</p>
+              <p>Para <strong>desglosar el IVA</strong> de un precio que ya lo incluye, se divide el total entre 1.16 (o 1.08) para obtener el precio sin IVA, y la diferencia es el impuesto.</p>
+
+              <div class="calculadora-info__disclaimer">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                  <circle cx="12" cy="12" r="10"/>
+                  <line x1="12" y1="8" x2="12" y2="12"/>
+                  <line x1="12" y1="16" x2="12.01" y2="16"/>
+                </svg>
+                <p>Esta calculadora es una herramienta informativa. Para situaciones fiscales especificas, consulta a un contador publico certificado o revisa directamente la legislacion vigente en el portal del SAT.</p>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+          <!-- Ad Block -->
+          <div class="ad-block">
+            <div class="ad-block__line"></div>
+            <span class="ad-block__label">Publicidad</span>
+            <span class="ad-block__size">300 × 250</span>
+          </div>
+
+          <!-- Related News -->
+          <div class="related-box">
+            <div class="related-box__header">
+              <div class="related-box__accent"></div>
+              <h3 class="related-box__title">Articulos relacionados</h3>
+            </div>
+            <div>
+              <a href="articulo.html" class="news-card-sm">
+                <div class="news-card-sm__image">
+                  <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=120&h=120&fit=crop&auto=format&q=80" alt="">
+                </div>
+                <div class="news-card-sm__content">
+                  <span class="badge badge--sm badge--impuestos">Impuestos</span>
+                  <h4 class="news-card-sm__title">Cambios al IVA en 2025: lo que debes saber</h4>
+                  <span class="news-card-sm__date">18 abr</span>
+                </div>
+              </a>
+              <a href="articulo.html" class="news-card-sm">
+                <div class="news-card-sm__image">
+                  <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=120&h=120&fit=crop&auto=format&q=80" alt="">
+                </div>
+                <div class="news-card-sm__content">
+                  <span class="badge badge--sm badge--sat">SAT</span>
+                  <h4 class="news-card-sm__title">IVA acreditable vs IVA trasladado: diferencias clave</h4>
+                  <span class="news-card-sm__date">15 abr</span>
+                </div>
+              </a>
+              <a href="articulo.html" class="news-card-sm">
+                <div class="news-card-sm__image">
+                  <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=120&h=120&fit=crop&auto=format&q=80" alt="">
+                </div>
+                <div class="news-card-sm__content">
+                  <span class="badge badge--sm badge--empresas">Empresas</span>
+                  <h4 class="news-card-sm__title">Como deducir el IVA de tus gastos empresariales</h4>
+                  <span class="news-card-sm__date">12 abr</span>
+                </div>
+              </a>
+              <a href="articulo.html" class="news-card-sm">
+                <div class="news-card-sm__image">
+                  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&h=120&fit=crop&auto=format&q=80" alt="">
+                </div>
+                <div class="news-card-sm__content">
+                  <span class="badge badge--sm badge--sat">SAT</span>
+                  <h4 class="news-card-sm__title">Requisitos de los CFDI para acreditar IVA</h4>
+                  <span class="news-card-sm__date">10 abr</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Mini Newsletter -->
+          <div class="mini-newsletter">
+            <div class="mini-newsletter__accent"></div>
+            <div class="mini-newsletter__pattern"></div>
+            <div class="mini-newsletter__content">
+              <div class="mini-newsletter__label">Newsletter semanal</div>
+              <h3 class="mini-newsletter__title">Recibe las reformas fiscales antes que nadie</h3>
+              <p class="mini-newsletter__text">45,000+ contadores y empresarios ya estan suscritos.</p>
+              <form class="mini-newsletter__form">
+                <input type="email" class="mini-newsletter__input" placeholder="tu@correo.com" required>
+                <button type="submit" class="mini-newsletter__btn">Suscribirme gratis</button>
+              </form>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__main">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <img src="assets/logo-contribuyente.png" alt="El Contribuyente" class="footer__logo">
+          <p class="footer__desc">El portal de referencia para contadores, administradores y empresarios mexicanos. Mas de 8 anos cubriendo las novedades del SAT, IMSS y el entorno fiscal nacional.</p>
+          <div class="footer__social">
+            <a href="#" class="footer__social-link" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="Twitter">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.259 5.631 5.905-5.631z"/></svg>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.96A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor"/></svg>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer__links">
+          <div>
+            <h4 class="footer__column-title">Categorias</h4>
+            <ul class="footer__column-list">
+              <li><a href="categoria.html?cat=sat" class="footer__link">SAT</a></li>
+              <li><a href="categoria.html?cat=imss" class="footer__link">IMSS</a></li>
+              <li><a href="categoria.html?cat=nominas" class="footer__link">Nominas</a></li>
+              <li><a href="categoria.html?cat=contabilidad" class="footer__link">Contabilidad</a></li>
+              <li><a href="categoria.html?cat=fiscal" class="footer__link">Fiscal</a></li>
+              <li><a href="cursos.html" class="footer__link">Cursos</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer__column-title">Herramientas</h4>
+            <ul class="footer__column-list">
+              <li><a href="calculadoras.html" class="footer__link">Calculadoras</a></li>
+              <li><a href="calculadora-iva.html" class="footer__link">Calculadora IVA</a></li>
+              <li><a href="#" class="footer__link">Calculadora ISR</a></li>
+              <li><a href="#" class="footer__link">Cuotas IMSS</a></li>
+              <li><a href="#" class="footer__link">UMA 2025</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer__column-title">Portal</h4>
+            <ul class="footer__column-list">
+              <li><a href="#" class="footer__link">Quienes somos</a></li>
+              <li><a href="#" class="footer__link">Anunciate</a></li>
+              <li><a href="#" class="footer__link">Escribe para nosotros</a></li>
+              <li><a href="#" class="footer__link">Contacto</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer__column-title">Legal</h4>
+            <ul class="footer__column-list">
+              <li><a href="#" class="footer__link">Aviso de privacidad</a></li>
+              <li><a href="#" class="footer__link">Terminos de uso</a></li>
+              <li><a href="#" class="footer__link">Politica de cookies</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="footer__bottom-inner">
+        <span class="footer__copyright">© 2025 El Contribuyente. Todos los derechos reservados.</span>
+        <span class="footer__location">CDMX, Mexico</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/calculadoras.js"></script>
+</body>
+</html>

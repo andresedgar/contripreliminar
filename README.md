@@ -16,6 +16,8 @@ elcontribuyente-design/
 ├── busqueda.html           # Resultados de busqueda
 ├── autor.html              # Perfil de autor
 ├── cursos.html             # Landing de cursos
+├── calculadoras.html       # Landing de calculadoras fiscales
+├── calculadora-iva.html    # Calculadora de IVA
 ├── componentes.html        # Showcase de componentes
 ├── css/
 │   ├── tokens.css          # Variables CSS (colores, tipografia, espaciado)
@@ -27,9 +29,11 @@ elcontribuyente-design/
 │       ├── categoria.css
 │       ├── busqueda.css
 │       ├── autor.css
-│       └── cursos.css
+│       ├── cursos.css
+│       └── calculadoras.css
 ├── js/
-│   └── main.js             # Interacciones minimas
+│   ├── main.js             # Interacciones minimas
+│   └── calculadoras.js     # Logica de calculadoras fiscales
 ├── assets/
 │   └── logo-contribuyente.png
 ├── netlify.toml            # Configuracion de Netlify

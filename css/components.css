@@ -176,6 +176,16 @@
   font-weight: var(--font-weight-semibold);
 }
 
+.navbar__link--highlight {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+.navbar__link--highlight:hover {
+  color: var(--color-primary-dark);
+  background: var(--color-primary-light);
+}
+
 .navbar__actions {
   display: flex;
   align-items: center;
