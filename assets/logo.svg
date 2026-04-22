@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 40" fill="none">
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fba61a"/>
+      <stop offset="100%" stop-color="#d4880a"/>
+    </linearGradient>
+  </defs>
+  <!-- Icon -->
+  <rect x="0" y="4" width="32" height="32" rx="4" fill="url(#logoGradient)"/>
+  <path d="M8 14h16M8 20h12M8 26h8" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Text -->
+  <text x="42" y="17" font-family="Playfair Display, Georgia, serif" font-size="14" font-weight="700" fill="#1a2744">El</text>
+  <text x="42" y="33" font-family="Playfair Display, Georgia, serif" font-size="16" font-weight="700" fill="#1a2744">Contribuyente</text>
+</svg>

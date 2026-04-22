@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr. Alejandro Rios Ponce — El Contribuyente</title>
+
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/autor.css">
+</head>
+<body>
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="topbar__date">
+      <span class="topbar__date-text">Lunes, 21 de abril de 2025</span>
+    </div>
+    <div class="topbar__ticker">
+      <div class="topbar__ticker-track">
+        <span class="topbar__ticker-item"><span class="topbar__ticker-label">USD/MXN</span><span class="topbar__ticker-value">17.2340</span><span class="topbar__ticker-up">&#9650;</span></span>
+        <span class="topbar__ticker-item"><span class="topbar__ticker-label">EUR/MXN</span><span class="topbar__ticker-value">18.9120</span><span class="topbar__ticker-down">&#9660;</span></span>
+        <span class="topbar__ticker-item"><span class="topbar__ticker-label">UDI</span><span class="topbar__ticker-value">8.1234</span><span class="topbar__ticker-up">&#9650;</span></span>
+      </div>
+    </div>
+    <div class="topbar__live">
+      <span class="topbar__live-text">En vivo</span>
+      <div class="topbar__live-dot"></div>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__logo">
+        <img src="assets/logo.svg" alt="El Contribuyente">
+      </a>
+      <nav class="navbar__nav">
+        <a href="cursos.html" class="navbar__link">Capacitacion</a>
+        <a href="categoria.html" class="navbar__link">Ultima hora</a>
+        <a href="categoria.html?cat=sat" class="navbar__link">SAT</a>
+        <a href="categoria.html?cat=impuestos" class="navbar__link">Impuestos</a>
+        <a href="categoria.html?cat=finanzas" class="navbar__link">Finanzas Personales</a>
+        <a href="index.html#calculadoras" class="navbar__link">Calculadoras Fiscales</a>
+      </nav>
+      <div class="navbar__actions">
+        <div class="navbar__search">
+          <button class="navbar__search-btn" aria-label="Buscar">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+          </button>
+        </div>
+        <a href="index.html#newsletter" class="navbar__cta">Suscribirme gratis</a>
+      </div>
+      <button class="navbar__toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!-- BREADCRUMB -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <div class="breadcrumb__inner">
+      <a href="index.html" class="breadcrumb__link">Inicio</a>
+      <span class="breadcrumb__separator">›</span>
+      <a href="#" class="breadcrumb__link">Autores</a>
+      <span class="breadcrumb__separator">›</span>
+      <span class="breadcrumb__current">Dr. Alejandro Rios Ponce</span>
+    </div>
+  </nav>
+
+  <main class="author-page">
+    <div class="container">
+      <!-- Author Profile -->
+      <header class="author-profile">
+        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&h=200&fit=crop&auto=format&q=80" alt="Dr. Alejandro Rios Ponce" class="author-profile__avatar">
+        <div class="author-profile__content">
+          <span class="author-profile__badge">Columnista</span>
+          <h1 class="author-profile__name">Dr. Alejandro Rios Ponce</h1>
+          <p class="author-profile__role">Fiscalista y socio de Rios y Asociados</p>
+          <p class="author-profile__bio">Abogado fiscalista con mas de 25 anos de experiencia. Doctor en Derecho Tributario por la UNAM. Socio fundador del despacho Rios y Asociados, especializado en defensa fiscal y planeacion tributaria. Columnista de El Contribuyente desde 2019.</p>
+          <div class="author-profile__stats">
+            <div class="author-profile__stat">
+              <span class="author-profile__stat-number">47</span>
+              <span class="author-profile__stat-label">Articulos</span>
+            </div>
+            <div class="author-profile__stat">
+              <span class="author-profile__stat-number">12K</span>
+              <span class="author-profile__stat-label">Lecturas</span>
+            </div>
+          </div>
+          <div class="author-profile__social">
+            <a href="#" class="author-profile__social-link" aria-label="Twitter">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.259 5.631 5.905-5.631z"/></svg>
+            </a>
+            <a href="#" class="author-profile__social-link" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="mailto:alejandro@riosyasociados.mx" class="author-profile__social-link" aria-label="Email">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <div class="author-layout">
+        <!-- Author Articles -->
+        <div class="author-articles">
+          <div class="section-title">
+            <div class="section-title__header">
+              <div class="section-title__accent"></div>
+              <h2 class="section-title__text">Articulos de Alejandro Rios Ponce</h2>
+            </div>
+          </div>
+
+          <div class="author-articles__grid">
+            <article class="news-card">
+              <a href="articulo.html" class="news-card__image">
+                <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=680&h=400&fit=crop&auto=format&q=80" alt="">
+              </a>
+              <div class="news-card__content">
+                <div class="news-card__meta">
+                  <span class="badge badge--sm badge--opinion">Opinion</span>
+                  <span class="news-card__date">18 abr</span>
+                </div>
+                <h3 class="news-card__title"><a href="articulo.html">La reforma al RESICO: oportunidad o trampa para el contribuyente?</a></h3>
+                <p class="news-card__excerpt">Los cambios al regimen simplificado generan mas dudas que certezas. El SAT debe clarificar los criterios antes de aplicar sanciones.</p>
+                <div class="news-card__footer">
+                  <span class="news-card__readtime">8 min lectura</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="news-card">
+              <a href="articulo.html" class="news-card__image">
+                <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=680&h=400&fit=crop&auto=format&q=80" alt="">
+              </a>
+              <div class="news-card__content">
+                <div class="news-card__meta">
+                  <span class="badge badge--sm badge--opinion">Opinion</span>
+                  <span class="news-card__date">11 abr</span>
+                </div>
+                <h3 class="news-card__title"><a href="articulo.html">El buzon tributario y la erosion de los derechos del contribuyente</a></h3>
+                <p class="news-card__excerpt">La autoridad usa el buzon tributario como herramienta de presion. Los plazos son insuficientes y las notificaciones, ambiguas.</p>
+                <div class="news-card__footer">
+                  <span class="news-card__readtime">7 min lectura</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="news-card">
+              <a href="articulo.html" class="news-card__image">
+                <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=680&h=400&fit=crop&auto=format&q=80" alt="">
+              </a>
+              <div class="news-card__content">
+                <div class="news-card__meta">
+                  <span class="badge badge--sm badge--opinion">Opinion</span>
+                  <span class="news-card__date">4 abr</span>
+                </div>
+                <h3 class="news-card__title"><a href="articulo.html">Cuando conviene impugnar una multa del SAT y cuando no</a></h3>
+                <p class="news-card__excerpt">No toda multa debe ser combatida. Analisis de los criterios para decidir si vale la pena una defensa fiscal.</p>
+                <div class="news-card__footer">
+                  <span class="news-card__readtime">10 min lectura</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="news-card">
+              <a href="articulo.html" class="news-card__image">
+                <img src="https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=680&h=400&fit=crop&auto=format&q=80" alt="">
+              </a>
+              <div class="news-card__content">
+                <div class="news-card__meta">
+                  <span class="badge badge--sm badge--opinion">Opinion</span>
+                  <span class="news-card__date">28 mar</span>
+                </div>
+                <h3 class="news-card__title"><a href="articulo.html">Los limites del secreto fiscal en la era de la transparencia</a></h3>
+                <p class="news-card__excerpt">Hasta donde llega la proteccion del contribuyente cuando la autoridad busca combatir la evasion.</p>
+                <div class="news-card__footer">
+                  <span class="news-card__readtime">9 min lectura</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="news-card">
+              <a href="articulo.html" class="news-card__image">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=680&h=400&fit=crop&auto=format&q=80" alt="">
+              </a>
+              <div class="news-card__content">
+                <div class="news-card__meta">
+                  <span class="badge badge--sm badge--opinion">Opinion</span>
+                  <span class="news-card__date">21 mar</span>
+                </div>
+                <h3 class="news-card__title"><a href="articulo.html">Razones practicas de inconstitucionalidad en el ISR 2026</a></h3>
+                <p class="news-card__excerpt">Analisis de los puntos debiles de la ley vigente que podrian ser impugnados ante tribunales.</p>
+                <div class="news-card__footer">
+                  <span class="news-card__readtime">12 min lectura</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="news-card">
+              <a href="articulo.html" class="news-card__image">
+                <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=680&h=400&fit=crop&auto=format&q=80" alt="">
+              </a>
+              <div class="news-card__content">
+                <div class="news-card__meta">
+                  <span class="badge badge--sm badge--opinion">Opinion</span>
+                  <span class="news-card__date">14 mar</span>
+                </div>
+                <h3 class="news-card__title"><a href="articulo.html">La paradoja del contribuyente cumplido: pagar mas por hacer bien las cosas</a></h3>
+                <p class="news-card__excerpt">Por que el sistema fiscal mexicano castiga a quien cumple y premia a quien negocia.</p>
+                <div class="news-card__footer">
+                  <span class="news-card__readtime">6 min lectura</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Pagination -->
+          <nav class="pagination" aria-label="Paginacion">
+            <button class="pagination__btn pagination__btn--disabled" aria-disabled="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <button class="pagination__btn pagination__btn--active">1</button>
+            <button class="pagination__btn">2</button>
+            <button class="pagination__btn">3</button>
+            <button class="pagination__btn">4</button>
+            <button class="pagination__btn">5</button>
+            <button class="pagination__btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
+          </nav>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+          <div class="related-box">
+            <div class="related-box__header">
+              <div class="related-box__accent"></div>
+              <h3 class="related-box__title">Otros columnistas</h3>
+            </div>
+            <div class="author-list">
+              <a href="autor.html" class="author-list__item">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=80&h=80&fit=crop&auto=format&q=80" alt="" class="author-list__avatar">
+                <div class="author-list__info">
+                  <h4 class="author-list__name">Mtra. Carmen Villanueva</h4>
+                  <p class="author-list__role">Contadora publica certificada</p>
+                </div>
+              </a>
+              <a href="autor.html" class="author-list__item">
+                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&auto=format&q=80" alt="" class="author-list__avatar">
+                <div class="author-list__info">
+                  <h4 class="author-list__name">Lic. Jorge Castellanos</h4>
+                  <p class="author-list__role">Abogado fiscal</p>
+                </div>
+              </a>
+              <a href="autor.html" class="author-list__item">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&auto=format&q=80" alt="" class="author-list__avatar">
+                <div class="author-list__info">
+                  <h4 class="author-list__name">CPC Roberto Mendez</h4>
+                  <p class="author-list__role">Especialista en nominas</p>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="mini-newsletter">
+            <div class="mini-newsletter__accent"></div>
+            <div class="mini-newsletter__pattern"></div>
+            <div class="mini-newsletter__content">
+              <div class="mini-newsletter__label">Newsletter semanal</div>
+              <h3 class="mini-newsletter__title">Recibe las reformas fiscales antes que nadie</h3>
+              <p class="mini-newsletter__text">45,000+ contadores suscritos.</p>
+              <form class="mini-newsletter__form">
+                <input type="email" class="mini-newsletter__input" placeholder="tu@correo.com" required>
+                <button type="submit" class="mini-newsletter__btn">Suscribirme gratis</button>
+              </form>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__main">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <img src="assets/logo.svg" alt="El Contribuyente" class="footer__logo">
+          <p class="footer__desc">El portal de referencia para contadores y empresarios mexicanos.</p>
+        </div>
+        <div class="footer__links">
+          <div>
+            <h4 class="footer__column-title">Categorias</h4>
+            <ul class="footer__column-list">
+              <li><a href="categoria.html?cat=sat" class="footer__link">SAT</a></li>
+              <li><a href="categoria.html?cat=imss" class="footer__link">IMSS</a></li>
+              <li><a href="cursos.html" class="footer__link">Cursos</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer__column-title">Portal</h4>
+            <ul class="footer__column-list">
+              <li><a href="#" class="footer__link">Quienes somos</a></li>
+              <li><a href="#" class="footer__link">Contacto</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer__column-title">Legal</h4>
+            <ul class="footer__column-list">
+              <li><a href="#" class="footer__link">Aviso de privacidad</a></li>
+              <li><a href="#" class="footer__link">Terminos de uso</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="footer__bottom-inner">
+        <span class="footer__copyright">© 2025 El Contribuyente.</span>
+        <span class="footer__location">CDMX, Mexico</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

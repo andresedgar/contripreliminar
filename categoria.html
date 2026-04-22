@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Todas las noticias sobre SAT: declaraciones, tramites, reformas fiscales y mas.">
+  <title>SAT — El Contribuyente</title>
+
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/categoria.css">
+</head>
+<body>
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="topbar__date">
+      <span class="topbar__date-text">Lunes, 21 de abril de 2025</span>
+    </div>
+    <div class="topbar__ticker">
+      <div class="topbar__ticker-track">
+        <span class="topbar__ticker-item"><span class="topbar__ticker-label">USD/MXN</span><span class="topbar__ticker-value">17.2340</span><span class="topbar__ticker-up">&#9650;</span></span>
+        <span class="topbar__ticker-item"><span class="topbar__ticker-label">EUR/MXN</span><span class="topbar__ticker-value">18.9120</span><span class="topbar__ticker-down">&#9660;</span></span>
+        <span class="topbar__ticker-item"><span class="topbar__ticker-label">UDI</span><span class="topbar__ticker-value">8.1234</span><span class="topbar__ticker-up">&#9650;</span></span>
+        <span class="topbar__ticker-item"><span class="topbar__ticker-label">TIIE 28D</span><span class="topbar__ticker-value">10.50%</span></span>
+      </div>
+    </div>
+    <div class="topbar__live">
+      <span class="topbar__live-text">En vivo</span>
+      <div class="topbar__live-dot"></div>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__logo">
+        <img src="assets/logo.svg" alt="El Contribuyente">
+      </a>
+      <nav class="navbar__nav">
+        <a href="cursos.html" class="navbar__link">Capacitacion</a>
+        <a href="categoria.html" class="navbar__link">Ultima hora</a>
+        <a href="categoria.html?cat=sat" class="navbar__link navbar__link--active">SAT</a>
+        <a href="categoria.html?cat=impuestos" class="navbar__link">Impuestos</a>
+        <a href="categoria.html?cat=finanzas" class="navbar__link">Finanzas Personales</a>
+        <a href="index.html#calculadoras" class="navbar__link">Calculadoras Fiscales</a>
+      </nav>
+      <div class="navbar__actions">
+        <div class="navbar__search">
+          <input type="text" class="navbar__search-input" placeholder="Buscar noticias...">
+          <button class="navbar__search-btn" aria-label="Buscar">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+          </button>
+        </div>
+        <a href="index.html#newsletter" class="navbar__cta">Suscribirme gratis</a>
+      </div>
+      <button class="navbar__toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!-- BREADCRUMB -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <div class="breadcrumb__inner">
+      <a href="index.html" class="breadcrumb__link">Inicio</a>
+      <span class="breadcrumb__separator">›</span>
+      <span class="breadcrumb__category" style="color: var(--color-cat-sat);">SAT</span>
+    </div>
+  </nav>
+
+  <main class="category-page">
+    <div class="container">
+      <!-- Category Header -->
+      <header class="category-header">
+        <div class="category-header__badge">
+          <span class="badge badge--sat" style="font-size: 14px; padding: 6px 16px;">SAT</span>
+        </div>
+        <h1 class="category-header__title">Noticias sobre el SAT</h1>
+        <p class="category-header__desc">Declaraciones, tramites, reformas fiscales, buzón tributario y todo lo relacionado con el Servicio de Administracion Tributaria.</p>
+        <div class="category-header__stats">
+          <span class="category-header__count">247 articulos</span>
+        </div>
+      </header>
+
+      <div class="category-layout">
+        <!-- Main Content -->
+        <div class="category-content">
+          <!-- Featured -->
+          <article class="category-featured">
+            <a href="articulo.html" class="category-featured__image">
+              <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=900&h=500&fit=crop&auto=format&q=80" alt="">
+            </a>
+            <div class="category-featured__content">
+              <div class="category-featured__meta">
+                <span class="badge badge--sm badge--sat">SAT</span>
+                <span class="category-featured__date">20 de abril, 2026</span>
+              </div>
+              <h2 class="category-featured__title"><a href="articulo.html">Cuanto puedes deducir realmente en tu declaracion anual</a></h2>
+              <p class="category-featured__excerpt">Gastos medicos, donativos e intereses hipotecarios tienen un techo compartido. Calcula cuanto puedes deducir realmente segun tu nivel de ingresos.</p>
+              <div class="category-featured__footer">
+                <span class="category-featured__author">Redaccion EC</span>
+                <span class="news-card__separator">·</span>
+                <span class="category-featured__readtime">5 min lectura</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- News Grid -->
+          <div class="category-grid">
+            <article class="news-card">
+              <a href="articulo.html" class="news-card__image">
+                <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=680&h=400&fit=crop&auto=format&q=80" alt="">
+              </a>
+              <div class="news-card__content">
+                <div class="news-card__meta">
+                  <span class="badge badge--sm badge--sat">SAT</span>
+                  <span class="news-card__date">13 abr</span>
+                </div>
+                <h3 class="news-card__title"><a href="articulo.html">SAT precarga mal deducciones y predial en declaracion anual</a></h3>
+                <p class="news-card__excerpt">El SAT esta precargando cifras erroneas en deducciones y predial para arrendadores.</p>
+                <div class="news-card__footer">
+                  <span class="news-card__author">Redaccion EC</span>
+                  <span class="news-card__separator">·</span>
+                  <span class="news-card__readtime">5 min lectura</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="news-card">
+              <a href="articulo.html" class="news-card__image">
+                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=680&h=400&fit=crop&auto=format&q=80" alt="">
+              </a>
+              <div class="news-card__content">
+                <div class="news-card__meta">
+                  <span class="badge badge--sm badge--sat">SAT</span>
+                  <span class="news-card__date">15 abr</span>
+                </div>
+                <h3 class="news-card__title"><a href="articulo.html">Tienes un adeudo con el SAT? Esto cambia en las garantias fiscales</a></h3>
+                <p class="news-card__excerpt">El SAT publico un anteproyecto de modificacion a la Resolucion Miscelanea Fiscal.</p>
+                <div class="news-card__footer">
+                  <span class="news-card__author">Redaccion EC</span>
+                  <span class="news-card__separator">·</span>
+                  <span class="news-card__readtime">4 min lectura</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="news-card">
+              <a href="articulo.html" class="news-card__image">
+                <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=680&h=400&fit=crop&auto=format&q=80" alt="">
+              </a>
+              <div class="news-card__content">
+                <div class="news-card__meta">
+                  <span class="badge badge--sm badge--sat">SAT</span>
+                  <span class="news-card__date">8 abr</span>
+                </div>
+                <h3 class="news-card__title"><a href="articulo.html">Portal SAT bloquea seccion de ingresos sin motivo aparente</a></h3>
+                <p class="news-card__excerpt">Portal SAT no valida correctamente ingresos aunque esten bien capturados.</p>
+                <div class="news-card__footer">
+                  <span class="news-card__author">Redaccion EC</span>
+                  <span class="news-card__separator">·</span>
+                  <span class="news-card__readtime">5 min lectura</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="news-card">
+              <a href="articulo.html" class="news-card__image">
+                <img src="https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=680&h=400&fit=crop&auto=format&q=80" alt="">
+              </a>
+              <div class="news-card__content">
+                <div class="news-card__meta">
+                  <span class="badge badge--sm badge--sat">SAT</span>
+                  <span class="news-card__date">6 abr</span>
+                </div>
+                <h3 class="news-card__title"><a href="articulo.html">Errores mas comunes en la declaracion anual 2026</a></h3>
+                <p class="news-card__excerpt">Evita estos errores frecuentes que pueden retrasar tu devolucion o generar multas.</p>
+                <div class="news-card__footer">
+                  <span class="news-card__author">Redaccion EC</span>
+                  <span class="news-card__separator">·</span>
+                  <span class="news-card__readtime">7 min lectura</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="news-card">
+              <a href="articulo.html" class="news-card__image">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=680&h=400&fit=crop&auto=format&q=80" alt="">
+              </a>
+              <div class="news-card__content">
+                <div class="news-card__meta">
+                  <span class="badge badge--sm badge--sat">SAT</span>
+                  <span class="news-card__date">4 abr</span>
+                </div>
+                <h3 class="news-card__title"><a href="articulo.html">Como recuperar tu e.firma si vencio o la perdiste</a></h3>
+                <p class="news-card__excerpt">Guia paso a paso para renovar o recuperar tu firma electronica ante el SAT.</p>
+                <div class="news-card__footer">
+                  <span class="news-card__author">Redaccion EC</span>
+                  <span class="news-card__separator">·</span>
+                  <span class="news-card__readtime">6 min lectura</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="news-card">
+              <a href="articulo.html" class="news-card__image">
+                <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=680&h=400&fit=crop&auto=format&q=80" alt="">
+              </a>
+              <div class="news-card__content">
+                <div class="news-card__meta">
+                  <span class="badge badge--sm badge--sat">SAT</span>
+                  <span class="news-card__date">2 abr</span>
+                </div>
+                <h3 class="news-card__title"><a href="articulo.html">Nuevas reglas para facturacion electronica en 2026</a></h3>
+                <p class="news-card__excerpt">El SAT actualizo las reglas de cancelacion de CFDI. Esto es lo que debes saber.</p>
+                <div class="news-card__footer">
+                  <span class="news-card__author">Redaccion EC</span>
+                  <span class="news-card__separator">·</span>
+                  <span class="news-card__readtime">4 min lectura</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Pagination -->
+          <nav class="pagination" aria-label="Paginacion">
+            <button class="pagination__btn pagination__btn--disabled" aria-disabled="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <button class="pagination__btn pagination__btn--active">1</button>
+            <button class="pagination__btn">2</button>
+            <button class="pagination__btn">3</button>
+            <button class="pagination__btn">4</button>
+            <button class="pagination__btn">5</button>
+            <span class="pagination__ellipsis">...</span>
+            <button class="pagination__btn">25</button>
+            <button class="pagination__btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
+          </nav>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+          <div class="ad-block">
+            <div class="ad-block__line"></div>
+            <span class="ad-block__label">Publicidad</span>
+            <span class="ad-block__size">300 × 250</span>
+          </div>
+
+          <div class="related-box">
+            <div class="related-box__header">
+              <div class="related-box__accent"></div>
+              <h3 class="related-box__title">Mas leidos</h3>
+            </div>
+            <div>
+              <a href="articulo.html" class="news-card-sm">
+                <div class="news-card-sm__image">
+                  <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=120&h=120&fit=crop&auto=format&q=80" alt="">
+                </div>
+                <div class="news-card-sm__content">
+                  <span class="badge badge--sm badge--sat">SAT</span>
+                  <h4 class="news-card-sm__title">Cuanto puedes deducir en tu declaracion anual</h4>
+                  <span class="news-card-sm__date">20 abr</span>
+                </div>
+              </a>
+              <a href="articulo.html" class="news-card-sm">
+                <div class="news-card-sm__image">
+                  <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=120&h=120&fit=crop&auto=format&q=80" alt="">
+                </div>
+                <div class="news-card-sm__content">
+                  <span class="badge badge--sm badge--general">General</span>
+                  <h4 class="news-card-sm__title">Gastos medicos deducibles: requisitos</h4>
+                  <span class="news-card-sm__date">17 abr</span>
+                </div>
+              </a>
+              <a href="articulo.html" class="news-card-sm">
+                <div class="news-card-sm__image">
+                  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&h=120&fit=crop&auto=format&q=80" alt="">
+                </div>
+                <div class="news-card-sm__content">
+                  <span class="badge badge--sm badge--gobierno">Gobierno</span>
+                  <h4 class="news-card-sm__title">SAT designa nueva titular</h4>
+                  <span class="news-card-sm__date">14 abr</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="mini-newsletter">
+            <div class="mini-newsletter__accent"></div>
+            <div class="mini-newsletter__pattern"></div>
+            <div class="mini-newsletter__content">
+              <div class="mini-newsletter__label">Newsletter semanal</div>
+              <h3 class="mini-newsletter__title">Recibe las reformas fiscales antes que nadie</h3>
+              <p class="mini-newsletter__text">45,000+ contadores suscritos.</p>
+              <form class="mini-newsletter__form">
+                <input type="email" class="mini-newsletter__input" placeholder="tu@correo.com" required>
+                <button type="submit" class="mini-newsletter__btn">Suscribirme gratis</button>
+              </form>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__main">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <img src="assets/logo.svg" alt="El Contribuyente" class="footer__logo">
+          <p class="footer__desc">El portal de referencia para contadores, administradores y empresarios mexicanos.</p>
+          <div class="footer__social">
+            <a href="#" class="footer__social-link" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+            <a href="#" class="footer__social-link" aria-label="Twitter"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.259 5.631 5.905-5.631z"/></svg></a>
+            <a href="#" class="footer__social-link" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          </div>
+        </div>
+        <div class="footer__links">
+          <div>
+            <h4 class="footer__column-title">Categorias</h4>
+            <ul class="footer__column-list">
+              <li><a href="categoria.html?cat=sat" class="footer__link">SAT</a></li>
+              <li><a href="categoria.html?cat=imss" class="footer__link">IMSS</a></li>
+              <li><a href="categoria.html?cat=nominas" class="footer__link">Nominas</a></li>
+              <li><a href="cursos.html" class="footer__link">Cursos</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer__column-title">Herramientas</h4>
+            <ul class="footer__column-list">
+              <li><a href="#" class="footer__link">Calculadora ISR</a></li>
+              <li><a href="#" class="footer__link">Calculadora IVA</a></li>
+              <li><a href="#" class="footer__link">Cuotas IMSS</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer__column-title">Portal</h4>
+            <ul class="footer__column-list">
+              <li><a href="#" class="footer__link">Quienes somos</a></li>
+              <li><a href="#" class="footer__link">Contacto</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer__column-title">Legal</h4>
+            <ul class="footer__column-list">
+              <li><a href="#" class="footer__link">Aviso de privacidad</a></li>
+              <li><a href="#" class="footer__link">Terminos de uso</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="footer__bottom-inner">
+        <span class="footer__copyright">© 2025 El Contribuyente. Todos los derechos reservados.</span>
+        <span class="footer__location">CDMX, Mexico</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="El Contribuyente - Portal de noticias fiscales, contables y financieras para contadores, administradores y empresarios mexicanos.">
+  <title>El Contribuyente — Noticias Fiscales, Contables y Financieras</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/home.css">
+</head>
+<body>
+  <!-- ═══════════════════════════════════════
+       TOP BAR
+       ═══════════════════════════════════════ -->
+  <div class="topbar">
+    <div class="topbar__date">
+      <span class="topbar__date-text">Lunes, 21 de abril de 2025</span>
+    </div>
+    <div class="topbar__ticker">
+      <div class="topbar__ticker-track">
+        <span class="topbar__ticker-item">
+          <span class="topbar__ticker-label">USD/MXN</span>
+          <span class="topbar__ticker-value">17.2340</span>
+          <span class="topbar__ticker-up">&#9650;</span>
+        </span>
+        <span class="topbar__ticker-item">
+          <span class="topbar__ticker-label">EUR/MXN</span>
+          <span class="topbar__ticker-value">18.9120</span>
+          <span class="topbar__ticker-down">&#9660;</span>
+        </span>
+        <span class="topbar__ticker-item">
+          <span class="topbar__ticker-label">UDI</span>
+          <span class="topbar__ticker-value">8.1234</span>
+          <span class="topbar__ticker-up">&#9650;</span>
+        </span>
+        <span class="topbar__ticker-item">
+          <span class="topbar__ticker-label">TIIE 28D</span>
+          <span class="topbar__ticker-value">10.50%</span>
+        </span>
+        <span class="topbar__ticker-item">
+          <span class="topbar__ticker-label">IPC BMV</span>
+          <span class="topbar__ticker-value">52,432</span>
+          <span class="topbar__ticker-up">&#9650;</span>
+        </span>
+        <span class="topbar__ticker-item">
+          <span class="topbar__ticker-label">WTI</span>
+          <span class="topbar__ticker-value">USD 82.14</span>
+          <span class="topbar__ticker-up">&#9650;</span>
+        </span>
+      </div>
+    </div>
+    <div class="topbar__live">
+      <span class="topbar__live-text">En vivo</span>
+      <div class="topbar__live-dot"></div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       NAVBAR
+       ═══════════════════════════════════════ -->
+  <header class="navbar">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__logo">
+        <img src="assets/logo.svg" alt="El Contribuyente">
+      </a>
+
+      <nav class="navbar__nav">
+        <a href="cursos.html" class="navbar__link">Capacitacion</a>
+        <a href="categoria.html" class="navbar__link navbar__link--active">Ultima hora</a>
+        <a href="categoria.html?cat=sat" class="navbar__link">SAT</a>
+        <a href="categoria.html?cat=impuestos" class="navbar__link">Impuestos</a>
+        <a href="categoria.html?cat=finanzas" class="navbar__link">Finanzas Personales</a>
+        <a href="#calculadoras" class="navbar__link">Calculadoras Fiscales</a>
+      </nav>
+
+      <div class="navbar__actions">
+        <div class="navbar__search">
+          <input type="text" class="navbar__search-input" placeholder="Buscar noticias, reformas...">
+          <button class="navbar__search-btn" aria-label="Buscar">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+              <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+            </svg>
+          </button>
+        </div>
+        <a href="#newsletter" class="navbar__cta">Suscribirme gratis</a>
+      </div>
+
+      <button class="navbar__toggle" aria-label="Menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ═══════════════════════════════════════
+         HERO - NOTICIAS DESTACADAS
+         ═══════════════════════════════════════ -->
+    <section class="hero">
+      <div class="container">
+        <div class="section-label">
+          <span class="section-label__text">Noticias destacadas</span>
+          <div class="section-label__line"></div>
+        </div>
+
+        <div class="hero-card">
+          <!-- Featured Article -->
+          <article class="hero-card__featured">
+            <div class="hero-card__featured-image">
+              <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1100&h=620&fit=crop&auto=format&q=80" alt="Documentos fiscales para la declaracion anual">
+            </div>
+            <div class="hero-card__featured-content">
+              <div class="hero-card__featured-meta">
+                <span class="badge badge--sat">SAT</span>
+                <span class="hero-card__featured-date">20 de abril, 2026</span>
+              </div>
+              <h1 class="hero-card__featured-title">
+                <a href="articulo.html">Cuanto puedes deducir realmente en tu declaracion anual</a>
+              </h1>
+              <p class="hero-card__featured-excerpt">Gastos medicos, donativos e intereses hipotecarios tienen un techo compartido. Calcula cuanto puedes deducir realmente segun tu nivel de ingresos y lo que establece el Articulo 151 de la Ley del ISR.</p>
+              <div class="hero-card__featured-footer">
+                <span class="hero-card__featured-author">Redaccion EC</span>
+                <span class="news-card__separator">·</span>
+                <span class="hero-card__featured-readtime">5 min lectura</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Secondary Articles -->
+          <div class="hero-card__secondary">
+            <a href="articulo.html" class="hero-card__secondary-item">
+              <div class="hero-card__secondary-thumb">
+                <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=320&h=240&fit=crop&auto=format&q=80" alt="">
+              </div>
+              <div class="hero-card__secondary-content">
+                <span class="badge badge--sm badge--general">General</span>
+                <h3 class="hero-card__secondary-title">Gastos medicos deducibles: requisitos y limites que debes conocer</h3>
+                <span class="hero-card__secondary-date">17 abr</span>
+              </div>
+            </a>
+
+            <a href="articulo.html" class="hero-card__secondary-item">
+              <div class="hero-card__secondary-thumb">
+                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=320&h=240&fit=crop&auto=format&q=80" alt="">
+              </div>
+              <div class="hero-card__secondary-content">
+                <span class="badge badge--sm badge--sat">SAT</span>
+                <h3 class="hero-card__secondary-title">Tienes un adeudo con el SAT? Esto cambia en las garantias fiscales</h3>
+                <span class="hero-card__secondary-date">15 abr</span>
+              </div>
+            </a>
+
+            <a href="articulo.html" class="hero-card__secondary-item">
+              <div class="hero-card__secondary-thumb">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=320&h=240&fit=crop&auto=format&q=80" alt="">
+              </div>
+              <div class="hero-card__secondary-content">
+                <span class="badge badge--sm badge--gobierno">Gobierno</span>
+                <h3 class="hero-card__secondary-title">SAT designa nueva titular de Grandes Contribuyentes</h3>
+                <span class="hero-card__secondary-date">14 abr</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         ULTIMAS NOTICIAS
+         ═══════════════════════════════════════ -->
+    <section class="news-feed">
+      <div class="container">
+        <div class="section-title">
+          <div class="section-title__header">
+            <div class="section-title__accent"></div>
+            <h2 class="section-title__text">Ultimas noticias</h2>
+          </div>
+        </div>
+
+        <div class="news-grid">
+          <article class="news-card">
+            <a href="articulo.html" class="news-card__image">
+              <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=680&h=400&fit=crop&auto=format&q=80" alt="">
+            </a>
+            <div class="news-card__content">
+              <div class="news-card__meta">
+                <span class="badge badge--sm badge--sat">SAT</span>
+                <span class="news-card__date">13 abr</span>
+              </div>
+              <h3 class="news-card__title"><a href="articulo.html">SAT precarga mal deducciones y predial en declaracion anual</a></h3>
+              <p class="news-card__excerpt">El SAT esta precargando cifras erroneas en deducciones y predial para arrendadores. Asi puedes detectar el error y corregirlo antes de enviar.</p>
+              <div class="news-card__footer">
+                <span class="news-card__author">Redaccion EC</span>
+                <span class="news-card__separator">·</span>
+                <span class="news-card__readtime">5 min lectura</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="news-card">
+            <a href="articulo.html" class="news-card__image">
+              <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=680&h=400&fit=crop&auto=format&q=80" alt="">
+            </a>
+            <div class="news-card__content">
+              <div class="news-card__meta">
+                <span class="badge badge--sm badge--general">General</span>
+                <span class="news-card__date">13 abr</span>
+              </div>
+              <h3 class="news-card__title"><a href="articulo.html">Como deducir tu ahorro para el retiro ante el SAT</a></h3>
+              <p class="news-card__excerpt">El SAT permite deducir aportaciones a planes de retiro y cuentas de ahorro especiales. Revisa limites, plazos y obligaciones antes de tu declaracion.</p>
+              <div class="news-card__footer">
+                <span class="news-card__author">Redaccion EC</span>
+                <span class="news-card__separator">·</span>
+                <span class="news-card__readtime">6 min lectura</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="news-card">
+            <a href="articulo.html" class="news-card__image">
+              <img src="https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=680&h=400&fit=crop&auto=format&q=80" alt="">
+            </a>
+            <div class="news-card__content">
+              <div class="news-card__meta">
+                <span class="badge badge--sm badge--impuestos">Impuestos</span>
+                <span class="news-card__date">10 abr</span>
+              </div>
+              <h3 class="news-card__title"><a href="articulo.html">No aparecio tu acuse en la declaracion anual? Esto esta pasando</a></h3>
+              <p class="news-card__excerpt">Usuarios reportan que al enviar su declaracion anual, el sistema del SAT no muestra el acuse y los regresa al inicio. Aqui la solucion.</p>
+              <div class="news-card__footer">
+                <span class="news-card__author">Redaccion EC</span>
+                <span class="news-card__separator">·</span>
+                <span class="news-card__readtime">4 min lectura</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="news-card">
+            <a href="articulo.html" class="news-card__image">
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=680&h=400&fit=crop&auto=format&q=80" alt="">
+            </a>
+            <div class="news-card__content">
+              <div class="news-card__meta">
+                <span class="badge badge--sm badge--impuestos">Impuestos</span>
+                <span class="news-card__date">10 abr</span>
+              </div>
+              <h3 class="news-card__title"><a href="articulo.html">Devolucion rechazada por SAT: como ver la causa y corregirla</a></h3>
+              <p class="news-card__excerpt">No esperes 40 dias. Consulta el estatus de tu devolucion SAT desde ahora y corrige errores antes de que sea demasiado tarde.</p>
+              <div class="news-card__footer">
+                <span class="news-card__author">Redaccion EC</span>
+                <span class="news-card__separator">·</span>
+                <span class="news-card__readtime">6 min lectura</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="news-card">
+            <a href="articulo.html" class="news-card__image">
+              <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=680&h=400&fit=crop&auto=format&q=80" alt="">
+            </a>
+            <div class="news-card__content">
+              <div class="news-card__meta">
+                <span class="badge badge--sm badge--sat">SAT</span>
+                <span class="news-card__date">8 abr</span>
+              </div>
+              <h3 class="news-card__title"><a href="articulo.html">Portal SAT bloquea seccion de ingresos sin motivo aparente</a></h3>
+              <p class="news-card__excerpt">Portal SAT no valida correctamente ingresos aunque esten bien capturados. Aprende a reconocer la falla y la solucion que ya ayudo a multiples contribuyentes.</p>
+              <div class="news-card__footer">
+                <span class="news-card__author">Redaccion EC</span>
+                <span class="news-card__separator">·</span>
+                <span class="news-card__readtime">5 min lectura</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="news-card">
+            <a href="articulo.html" class="news-card__image">
+              <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=680&h=400&fit=crop&auto=format&q=80" alt="">
+            </a>
+            <div class="news-card__content">
+              <div class="news-card__meta">
+                <span class="badge badge--sm badge--gobierno">Gobierno</span>
+                <span class="news-card__date">14 abr</span>
+              </div>
+              <h3 class="news-card__title"><a href="articulo.html">SAT designa nueva titular de Grandes Contribuyentes</a></h3>
+              <p class="news-card__excerpt">Jennifer Krystel Castillo Madrid asume Grandes Contribuyentes el 1 de mayo. Abogada con 18 anos en sector publico y posgrados en derecho tributario.</p>
+              <div class="news-card__footer">
+                <span class="news-card__author">Redaccion EC</span>
+                <span class="news-card__separator">·</span>
+                <span class="news-card__readtime">3 min lectura</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="news-feed__more">
+          <a href="categoria.html" class="btn btn--secondary">Ver mas noticias</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         BLOQUE OPINION
+         ═══════════════════════════════════════ -->
+    <section class="opinion-block">
+      <div class="container">
+        <div class="section-title">
+          <div class="section-title__header">
+            <div class="section-title__accent"></div>
+            <h2 class="section-title__text">Opinion</h2>
+          </div>
+          <p class="section-title__sub">Analisis y perspectivas de expertos en materia fiscal y contable</p>
+        </div>
+
+        <div class="opinion-grid">
+          <article class="opinion-card">
+            <div class="opinion-card__header">
+              <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=120&h=120&fit=crop&auto=format&q=80" alt="Dr. Alejandro Rios Ponce" class="opinion-card__avatar">
+              <div>
+                <h3 class="opinion-card__author">Dr. Alejandro Rios Ponce</h3>
+                <p class="opinion-card__role">Fiscalista y socio de Rios y Asociados</p>
+              </div>
+            </div>
+            <h4 class="opinion-card__title"><a href="articulo.html">La reforma al RESICO: oportunidad o trampa para el contribuyente?</a></h4>
+            <p class="opinion-card__excerpt">Los cambios al regimen simplificado generan mas dudas que certezas. El SAT debe clarificar los criterios antes de aplicar sanciones.</p>
+          </article>
+
+          <article class="opinion-card">
+            <div class="opinion-card__header">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=120&h=120&fit=crop&auto=format&q=80" alt="Mtra. Carmen Villanueva" class="opinion-card__avatar">
+              <div>
+                <h3 class="opinion-card__author">Mtra. Carmen Villanueva</h3>
+                <p class="opinion-card__role">Contadora publica certificada, UNAM</p>
+              </div>
+            </div>
+            <h4 class="opinion-card__title"><a href="articulo.html">Por que la digitalizacion fiscal en Mexico aun falla a las PyMEs</a></h4>
+            <p class="opinion-card__excerpt">A pesar de los avances del CFDI 4.0, miles de pequenas empresas siguen sin poder cumplir correctamente sus obligaciones electronicamente.</p>
+          </article>
+
+          <article class="opinion-card">
+            <div class="opinion-card__header">
+              <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=120&h=120&fit=crop&auto=format&q=80" alt="Lic. Jorge Castellanos" class="opinion-card__avatar">
+              <div>
+                <h3 class="opinion-card__author">Lic. Jorge Castellanos</h3>
+                <p class="opinion-card__role">Abogado fiscal, ex funcionario del SAT</p>
+              </div>
+            </div>
+            <h4 class="opinion-card__title"><a href="articulo.html">El buzon tributario y la erosion de los derechos del contribuyente</a></h4>
+            <p class="opinion-card__excerpt">La autoridad usa el buzon tributario como herramienta de presion. Los plazos son insuficientes y las notificaciones, ambiguas.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         BLOQUE GOBIERNO
+         ═══════════════════════════════════════ -->
+    <section class="category-block category-block--gobierno">
+      <div class="container">
+        <div class="section-title">
+          <div class="section-title__header">
+            <div class="section-title__accent" style="background: var(--color-cat-gobierno);"></div>
+            <h2 class="section-title__text">Gobierno</h2>
+          </div>
+        </div>
+
+        <div class="category-block__grid">
+          <article class="news-card news-card--horizontal">
+            <a href="articulo.html" class="news-card__image">
+              <img src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=680&h=400&fit=crop&auto=format&q=80" alt="">
+            </a>
+            <div class="news-card__content">
+              <div class="news-card__meta">
+                <span class="badge badge--sm badge--gobierno">Gobierno</span>
+                <span class="news-card__date">14 abr</span>
+              </div>
+              <h3 class="news-card__title"><a href="articulo.html">SAT designa nueva titular de Grandes Contribuyentes a partir del 1 de mayo</a></h3>
+              <p class="news-card__excerpt">Jennifer Krystel Castillo Madrid asume la direccion. Abogada con 18 anos en sector publico y formacion en derecho tributario por el ITAM.</p>
+              <div class="news-card__footer">
+                <span class="news-card__author">Redaccion EC</span>
+                <span class="news-card__separator">·</span>
+                <span class="news-card__readtime">3 min lectura</span>
+              </div>
+            </div>
+          </article>
+
+          <div class="category-block__list">
+            <a href="articulo.html" class="category-block__item">
+              <span class="badge badge--sm badge--gobierno">Gobierno</span>
+              <h4>Cambios en garantias fiscales vigentes desde el 14 de abril</h4>
+              <span class="category-block__date">15 abr</span>
+            </a>
+            <a href="articulo.html" class="category-block__item">
+              <span class="badge badge--sm badge--gobierno">Gobierno</span>
+              <h4>Secretaria de Hacienda refuerza estrategia de recaudacion digital</h4>
+              <span class="category-block__date">12 abr</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         BLOQUE EMPRESAS
+         ═══════════════════════════════════════ -->
+    <section class="category-block category-block--empresas">
+      <div class="container">
+        <div class="section-title">
+          <div class="section-title__header">
+            <div class="section-title__accent" style="background: var(--color-cat-empresas);"></div>
+            <h2 class="section-title__text">Empresas</h2>
+          </div>
+        </div>
+
+        <div class="news-grid news-grid--3">
+          <article class="news-card">
+            <a href="articulo.html" class="news-card__image">
+              <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=680&h=400&fit=crop&auto=format&q=80" alt="">
+            </a>
+            <div class="news-card__content">
+              <div class="news-card__meta">
+                <span class="badge badge--sm badge--empresas">Empresas</span>
+                <span class="news-card__date">16 abr</span>
+              </div>
+              <h3 class="news-card__title"><a href="articulo.html">Las deducibles que mas aprovechan las PyMEs mexicanas en 2026</a></h3>
+              <p class="news-card__excerpt">Gastos de capacitacion, tecnologia y arrendamiento encabezan las deducciones mas utilizadas.</p>
+            </div>
+          </article>
+
+          <article class="news-card">
+            <a href="articulo.html" class="news-card__image">
+              <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=680&h=400&fit=crop&auto=format&q=80" alt="">
+            </a>
+            <div class="news-card__content">
+              <div class="news-card__meta">
+                <span class="badge badge--sm badge--empresas">Empresas</span>
+                <span class="news-card__date">11 abr</span>
+              </div>
+              <h3 class="news-card__title"><a href="articulo.html">Como las startups mexicanas usan el RESICO para optimizar su carga fiscal</a></h3>
+              <p class="news-card__excerpt">Mas de 12,000 empresas tecnologicas optaron por el regimen simplificado en 2025.</p>
+            </div>
+          </article>
+
+          <article class="news-card">
+            <a href="articulo.html" class="news-card__image">
+              <img src="https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=680&h=400&fit=crop&auto=format&q=80" alt="">
+            </a>
+            <div class="news-card__content">
+              <div class="news-card__meta">
+                <span class="badge badge--sm badge--empresas">Empresas</span>
+                <span class="news-card__date">9 abr</span>
+              </div>
+              <h3 class="news-card__title"><a href="articulo.html">Deduccion de inversiones en tecnologia: lo que toda empresa debe saber</a></h3>
+              <p class="news-card__excerpt">La ley permite deducir hasta el 100% de la inversion en equipo de computo y software.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         CURSOS Y CAPACITACION
+         ═══════════════════════════════════════ -->
+    <section class="courses-section">
+      <div class="container">
+        <div class="section-title">
+          <div class="section-title__header">
+            <div class="section-title__accent"></div>
+            <h2 class="section-title__text">Cursos y Capacitacion</h2>
+          </div>
+          <p class="section-title__sub">Capacitacion especializada para contadores, administradores y empresarios mexicanos. Aprende con los mejores expertos del sector fiscal.</p>
+        </div>
+
+        <div class="courses-grid">
+          <article class="course-card">
+            <div class="course-card__image">
+              <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=700&h=380&fit=crop&auto=format&q=80" alt="Declaracion Anual">
+              <span class="course-card__level badge badge--sm badge--intermedio">Intermedio</span>
+            </div>
+            <div class="course-card__content">
+              <h3 class="course-card__title">Declaracion Anual de Personas Fisicas 2026</h3>
+              <div class="course-card__instructor">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/>
+                </svg>
+                <span>CPC Maria Fernandez Garcia</span>
+              </div>
+              <div class="course-card__duration">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+                </svg>
+                <span>8 horas</span>
+              </div>
+              <div class="course-card__footer">
+                <div>
+                  <span class="course-card__price-label">Precio</span>
+                  <span class="course-card__price">$1,299 <span class="course-card__price-currency">MXN</span></span>
+                </div>
+                <a href="cursos.html" class="btn btn--primary" style="padding: 10px 20px; font-size: 13px;">Inscribirme</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="course-card">
+            <div class="course-card__image">
+              <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=700&h=380&fit=crop&auto=format&q=80" alt="CFDI 4.0">
+              <span class="course-card__level badge badge--sm badge--basico">Basico</span>
+            </div>
+            <div class="course-card__content">
+              <h3 class="course-card__title">CFDI 4.0: Facturacion Electronica desde Cero</h3>
+              <div class="course-card__instructor">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/>
+                </svg>
+                <span>Mtro. Alejandro Cruz Morales</span>
+              </div>
+              <div class="course-card__duration">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+                </svg>
+                <span>6 horas</span>
+              </div>
+              <div class="course-card__footer">
+                <div>
+                  <span class="course-card__price-label">Precio</span>
+                  <span class="course-card__price">$899 <span class="course-card__price-currency">MXN</span></span>
+                </div>
+                <a href="cursos.html" class="btn btn--primary" style="padding: 10px 20px; font-size: 13px;">Inscribirme</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="course-card">
+            <div class="course-card__image">
+              <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=700&h=380&fit=crop&auto=format&q=80" alt="RESICO Avanzado">
+              <span class="course-card__level badge badge--sm badge--avanzado">Avanzado</span>
+            </div>
+            <div class="course-card__content">
+              <h3 class="course-card__title">RESICO Avanzado: Estrategias de Optimizacion Fiscal</h3>
+              <div class="course-card__instructor">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/>
+                </svg>
+                <span>CPA Jorge Sanchez Ruiz</span>
+              </div>
+              <div class="course-card__duration">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+                </svg>
+                <span>10 horas</span>
+              </div>
+              <div class="course-card__footer">
+                <div>
+                  <span class="course-card__price-label">Precio</span>
+                  <span class="course-card__price">$1,599 <span class="course-card__price-currency">MXN</span></span>
+                </div>
+                <a href="cursos.html" class="btn btn--primary" style="padding: 10px 20px; font-size: 13px;">Inscribirme</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="courses-section__more">
+          <a href="cursos.html" class="courses-section__link">Ver todos los cursos disponibles →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         CALCULADORAS FISCALES
+         ═══════════════════════════════════════ -->
+    <section class="calculators-section" id="calculadoras">
+      <div class="container">
+        <div class="section-title">
+          <div class="section-title__header">
+            <div class="section-title__accent"></div>
+            <h2 class="section-title__text">Calculadoras Fiscales</h2>
+          </div>
+          <p class="section-title__sub">Herramientas gratuitas para calcular impuestos, cuotas y obligaciones fiscales</p>
+        </div>
+
+        <div class="calculators-grid">
+          <article class="calc-card">
+            <div class="calc-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2L2 7l10 5 10-5-10-5"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+            <div class="calc-card__content">
+              <h3 class="calc-card__name">Calculo de ISR</h3>
+              <p class="calc-card__desc">Personas fisicas y morales</p>
+            </div>
+          </article>
+
+          <article class="calc-card">
+            <div class="calc-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/>
+              </svg>
+            </div>
+            <div class="calc-card__content">
+              <h3 class="calc-card__name">Desglose de IVA</h3>
+              <p class="calc-card__desc">Traslado y acreditamiento</p>
+            </div>
+          </article>
+
+          <article class="calc-card">
+            <div class="calc-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 7H4a2 2 0 00-2 2v10a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z"/><path d="M16 3H8L6 7h12l-2-4z"/>
+              </svg>
+            </div>
+            <div class="calc-card__content">
+              <h3 class="calc-card__name">Cuotas IMSS</h3>
+              <p class="calc-card__desc">Patron y trabajador</p>
+            </div>
+          </article>
+
+          <article class="calc-card">
+            <div class="calc-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/>
+              </svg>
+            </div>
+            <div class="calc-card__content">
+              <h3 class="calc-card__name">PTU 2026</h3>
+              <p class="calc-card__desc">Participacion de utilidades</p>
+            </div>
+          </article>
+
+          <article class="calc-card">
+            <div class="calc-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.74"/>
+              </svg>
+            </div>
+            <div class="calc-card__content">
+              <h3 class="calc-card__name">Nomina Semanal</h3>
+              <p class="calc-card__desc">Salario neto y retenciones</p>
+            </div>
+          </article>
+
+          <article class="calc-card">
+            <div class="calc-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
+              </svg>
+            </div>
+            <div class="calc-card__content">
+              <h3 class="calc-card__name">UMA y Salario Minimo</h3>
+              <p class="calc-card__desc">Valores vigentes 2026</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         NEWSLETTER
+         ═══════════════════════════════════════ -->
+    <section class="newsletter" id="newsletter">
+      <div class="newsletter__accent"></div>
+      <div class="newsletter__pattern"></div>
+      <div class="newsletter__content">
+        <div class="newsletter__badge">
+          <div class="newsletter__badge-dot"></div>
+          <span class="newsletter__badge-text">Newsletter semanal</span>
+        </div>
+
+        <h2 class="newsletter__title">Recibe las reformas fiscales<br>antes que nadie</h2>
+
+        <p class="newsletter__text">
+          Mas de <strong class="newsletter__highlight">45,000 contadores y empresarios</strong> reciben cada semana el resumen de novedades del SAT, cambios en el IMSS y actualizaciones fiscales que impactan su negocio.
+        </p>
+
+        <form class="newsletter__form">
+          <input type="email" class="newsletter__input" placeholder="tu@correo.com" required>
+          <button type="submit" class="newsletter__submit">Suscribirme gratis</button>
+        </form>
+
+        <p class="newsletter__disclaimer">Sin spam. Cancela cuando quieras. Aviso de privacidad aplicable.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ═══════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer__main">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <img src="assets/logo.svg" alt="El Contribuyente" class="footer__logo">
+          <p class="footer__desc">El portal de referencia para contadores, administradores y empresarios mexicanos. Mas de 8 anos cubriendo las novedades del SAT, IMSS y el entorno fiscal nacional.</p>
+          <div class="footer__social">
+            <a href="#" class="footer__social-link" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="Twitter">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.259 5.631 5.905-5.631z"/></svg>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.96A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor"/></svg>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer__links">
+          <div>
+            <h4 class="footer__column-title">Categorias</h4>
+            <ul class="footer__column-list">
+              <li><a href="categoria.html?cat=sat" class="footer__link">SAT</a></li>
+              <li><a href="categoria.html?cat=imss" class="footer__link">IMSS</a></li>
+              <li><a href="categoria.html?cat=nominas" class="footer__link">Nominas</a></li>
+              <li><a href="categoria.html?cat=contabilidad" class="footer__link">Contabilidad</a></li>
+              <li><a href="categoria.html?cat=fiscal" class="footer__link">Fiscal</a></li>
+              <li><a href="cursos.html" class="footer__link">Cursos</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer__column-title">Herramientas</h4>
+            <ul class="footer__column-list">
+              <li><a href="#" class="footer__link">Calculadora ISR</a></li>
+              <li><a href="#" class="footer__link">Calculadora IVA</a></li>
+              <li><a href="#" class="footer__link">Cuotas IMSS</a></li>
+              <li><a href="#" class="footer__link">Calculadora PTU</a></li>
+              <li><a href="#" class="footer__link">UMA 2025</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer__column-title">Portal</h4>
+            <ul class="footer__column-list">
+              <li><a href="#" class="footer__link">Quienes somos</a></li>
+              <li><a href="#" class="footer__link">Anunciate</a></li>
+              <li><a href="#" class="footer__link">Escribe para nosotros</a></li>
+              <li><a href="#" class="footer__link">Contacto</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer__column-title">Legal</h4>
+            <ul class="footer__column-list">
+              <li><a href="#" class="footer__link">Aviso de privacidad</a></li>
+              <li><a href="#" class="footer__link">Terminos de uso</a></li>
+              <li><a href="#" class="footer__link">Politica de cookies</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="footer__bottom-inner">
+        <span class="footer__copyright">© 2025 El Contribuyente. Todos los derechos reservados.</span>
+        <span class="footer__location">CDMX, Mexico</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

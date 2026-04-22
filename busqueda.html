@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resultados de busqueda — El Contribuyente</title>
+
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/busqueda.css">
+</head>
+<body>
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="topbar__date">
+      <span class="topbar__date-text">Lunes, 21 de abril de 2025</span>
+    </div>
+    <div class="topbar__ticker">
+      <div class="topbar__ticker-track">
+        <span class="topbar__ticker-item"><span class="topbar__ticker-label">USD/MXN</span><span class="topbar__ticker-value">17.2340</span><span class="topbar__ticker-up">&#9650;</span></span>
+        <span class="topbar__ticker-item"><span class="topbar__ticker-label">EUR/MXN</span><span class="topbar__ticker-value">18.9120</span><span class="topbar__ticker-down">&#9660;</span></span>
+        <span class="topbar__ticker-item"><span class="topbar__ticker-label">UDI</span><span class="topbar__ticker-value">8.1234</span><span class="topbar__ticker-up">&#9650;</span></span>
+      </div>
+    </div>
+    <div class="topbar__live">
+      <span class="topbar__live-text">En vivo</span>
+      <div class="topbar__live-dot"></div>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__logo">
+        <img src="assets/logo.svg" alt="El Contribuyente">
+      </a>
+      <nav class="navbar__nav">
+        <a href="cursos.html" class="navbar__link">Capacitacion</a>
+        <a href="categoria.html" class="navbar__link">Ultima hora</a>
+        <a href="categoria.html?cat=sat" class="navbar__link">SAT</a>
+        <a href="categoria.html?cat=impuestos" class="navbar__link">Impuestos</a>
+        <a href="categoria.html?cat=finanzas" class="navbar__link">Finanzas Personales</a>
+        <a href="index.html#calculadoras" class="navbar__link">Calculadoras Fiscales</a>
+      </nav>
+      <div class="navbar__actions">
+        <div class="navbar__search navbar__search--open">
+          <input type="text" class="navbar__search-input" placeholder="Buscar noticias..." value="declaracion anual" style="display: block;">
+          <button class="navbar__search-btn" aria-label="Buscar">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+          </button>
+        </div>
+        <a href="index.html#newsletter" class="navbar__cta">Suscribirme gratis</a>
+      </div>
+      <button class="navbar__toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main class="search-page">
+    <div class="container">
+      <!-- Search Header -->
+      <header class="search-header">
+        <div class="search-header__icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+          </svg>
+        </div>
+        <h1 class="search-header__title">Resultados para <span class="search-header__query">"declaracion anual"</span></h1>
+        <p class="search-header__count">Se encontraron <strong>47 resultados</strong></p>
+      </header>
+
+      <!-- Search Form -->
+      <form class="search-form">
+        <div class="search-form__input-wrapper">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+          <input type="text" class="search-form__input" value="declaracion anual" placeholder="Buscar noticias, reformas, calculadoras...">
+          <button type="submit" class="search-form__submit">Buscar</button>
+        </div>
+        <div class="search-form__filters">
+          <span class="search-form__filter-label">Filtrar por:</span>
+          <button type="button" class="search-form__filter search-form__filter--active">Todos</button>
+          <button type="button" class="search-form__filter">Noticias</button>
+          <button type="button" class="search-form__filter">Opinion</button>
+          <button type="button" class="search-form__filter">Cursos</button>
+          <button type="button" class="search-form__filter">Calculadoras</button>
+        </div>
+      </form>
+
+      <div class="search-layout">
+        <!-- Results -->
+        <div class="search-results">
+          <article class="search-result">
+            <a href="articulo.html" class="search-result__image">
+              <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=300&h=200&fit=crop&auto=format&q=80" alt="">
+            </a>
+            <div class="search-result__content">
+              <div class="search-result__meta">
+                <span class="badge badge--sm badge--sat">SAT</span>
+                <span class="search-result__date">20 de abril, 2026</span>
+              </div>
+              <h2 class="search-result__title"><a href="articulo.html">Cuanto puedes deducir realmente en tu <mark>declaracion anual</mark></a></h2>
+              <p class="search-result__excerpt">Gastos medicos, donativos e intereses hipotecarios tienen un techo compartido. Calcula cuanto puedes deducir realmente segun tu nivel de ingresos y lo que establece el Articulo 151 de la Ley del ISR.</p>
+              <div class="search-result__footer">
+                <span class="search-result__author">Redaccion EC</span>
+                <span class="search-result__separator">·</span>
+                <span class="search-result__readtime">5 min lectura</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="search-result">
+            <a href="articulo.html" class="search-result__image">
+              <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=300&h=200&fit=crop&auto=format&q=80" alt="">
+            </a>
+            <div class="search-result__content">
+              <div class="search-result__meta">
+                <span class="badge badge--sm badge--sat">SAT</span>
+                <span class="search-result__date">13 de abril, 2026</span>
+              </div>
+              <h2 class="search-result__title"><a href="articulo.html">SAT precarga mal deducciones y predial en <mark>declaracion anual</mark></a></h2>
+              <p class="search-result__excerpt">El SAT esta precargando cifras erroneas en deducciones y predial para arrendadores. Asi puedes detectar el error y corregirlo antes de enviar tu <mark>declaracion</mark>.</p>
+              <div class="search-result__footer">
+                <span class="search-result__author">Redaccion EC</span>
+                <span class="search-result__separator">·</span>
+                <span class="search-result__readtime">5 min lectura</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="search-result">
+            <a href="articulo.html" class="search-result__image">
+              <img src="https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=300&h=200&fit=crop&auto=format&q=80" alt="">
+            </a>
+            <div class="search-result__content">
+              <div class="search-result__meta">
+                <span class="badge badge--sm badge--impuestos">Impuestos</span>
+                <span class="search-result__date">10 de abril, 2026</span>
+              </div>
+              <h2 class="search-result__title"><a href="articulo.html">No aparecio tu acuse en la <mark>declaracion anual</mark>? Esto esta pasando</a></h2>
+              <p class="search-result__excerpt">Usuarios reportan que al enviar su <mark>declaracion anual</mark>, el sistema del SAT no muestra el acuse y los regresa al inicio. Aqui la solucion.</p>
+              <div class="search-result__footer">
+                <span class="search-result__author">Redaccion EC</span>
+                <span class="search-result__separator">·</span>
+                <span class="search-result__readtime">4 min lectura</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="search-result">
+            <a href="articulo.html" class="search-result__image">
+              <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=300&h=200&fit=crop&auto=format&q=80" alt="">
+            </a>
+            <div class="search-result__content">
+              <div class="search-result__meta">
+                <span class="badge badge--sm badge--general">General</span>
+                <span class="search-result__date">13 de abril, 2026</span>
+              </div>
+              <h2 class="search-result__title"><a href="articulo.html">Como deducir tu ahorro para el retiro ante el SAT</a></h2>
+              <p class="search-result__excerpt">El SAT permite deducir aportaciones a planes de retiro en tu <mark>declaracion anual</mark>. Revisa limites, plazos y obligaciones.</p>
+              <div class="search-result__footer">
+                <span class="search-result__author">Redaccion EC</span>
+                <span class="search-result__separator">·</span>
+                <span class="search-result__readtime">6 min lectura</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="search-result">
+            <a href="cursos.html" class="search-result__image">
+              <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=300&h=200&fit=crop&auto=format&q=80" alt="">
+            </a>
+            <div class="search-result__content">
+              <div class="search-result__meta">
+                <span class="badge badge--sm badge--cursos">Cursos</span>
+                <span class="search-result__date">Curso disponible</span>
+              </div>
+              <h2 class="search-result__title"><a href="cursos.html"><mark>Declaracion Anual</mark> de Personas Fisicas 2026</a></h2>
+              <p class="search-result__excerpt">Curso completo de 8 horas para dominar todos los aspectos de la <mark>declaracion anual</mark>. Impartido por CPC Maria Fernandez Garcia. Nivel intermedio.</p>
+              <div class="search-result__footer">
+                <span class="search-result__author">CPC Maria Fernandez Garcia</span>
+                <span class="search-result__separator">·</span>
+                <span class="search-result__readtime">$1,299 MXN</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Pagination -->
+          <nav class="pagination" aria-label="Paginacion">
+            <button class="pagination__btn pagination__btn--disabled" aria-disabled="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <button class="pagination__btn pagination__btn--active">1</button>
+            <button class="pagination__btn">2</button>
+            <button class="pagination__btn">3</button>
+            <button class="pagination__btn">4</button>
+            <button class="pagination__btn">5</button>
+            <button class="pagination__btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
+          </nav>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+          <div class="search-suggestions">
+            <h3 class="search-suggestions__title">Busquedas populares</h3>
+            <ul class="search-suggestions__list">
+              <li><a href="busqueda.html?q=CFDI">CFDI 4.0</a></li>
+              <li><a href="busqueda.html?q=devolucion">Devolucion de impuestos</a></li>
+              <li><a href="busqueda.html?q=RESICO">RESICO</a></li>
+              <li><a href="busqueda.html?q=e.firma">e.firma</a></li>
+              <li><a href="busqueda.html?q=buzon+tributario">Buzon tributario</a></li>
+              <li><a href="busqueda.html?q=ISR">Calculo de ISR</a></li>
+            </ul>
+          </div>
+
+          <div class="mini-newsletter">
+            <div class="mini-newsletter__accent"></div>
+            <div class="mini-newsletter__pattern"></div>
+            <div class="mini-newsletter__content">
+              <div class="mini-newsletter__label">Newsletter semanal</div>
+              <h3 class="mini-newsletter__title">Recibe las reformas fiscales antes que nadie</h3>
+              <p class="mini-newsletter__text">45,000+ contadores suscritos.</p>
+              <form class="mini-newsletter__form">
+                <input type="email" class="mini-newsletter__input" placeholder="tu@correo.com" required>
+                <button type="submit" class="mini-newsletter__btn">Suscribirme gratis</button>
+              </form>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__main">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <img src="assets/logo.svg" alt="El Contribuyente" class="footer__logo">
+          <p class="footer__desc">El portal de referencia para contadores, administradores y empresarios mexicanos.</p>
+        </div>
+        <div class="footer__links">
+          <div>
+            <h4 class="footer__column-title">Categorias</h4>
+            <ul class="footer__column-list">
+              <li><a href="categoria.html?cat=sat" class="footer__link">SAT</a></li>
+              <li><a href="categoria.html?cat=imss" class="footer__link">IMSS</a></li>
+              <li><a href="cursos.html" class="footer__link">Cursos</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer__column-title">Herramientas</h4>
+            <ul class="footer__column-list">
+              <li><a href="#" class="footer__link">Calculadora ISR</a></li>
+              <li><a href="#" class="footer__link">Calculadora IVA</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer__column-title">Portal</h4>
+            <ul class="footer__column-list">
+              <li><a href="#" class="footer__link">Quienes somos</a></li>
+              <li><a href="#" class="footer__link">Contacto</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer__column-title">Legal</h4>
+            <ul class="footer__column-list">
+              <li><a href="#" class="footer__link">Aviso de privacidad</a></li>
+              <li><a href="#" class="footer__link">Terminos de uso</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="footer__bottom-inner">
+        <span class="footer__copyright">© 2025 El Contribuyente.</span>
+        <span class="footer__location">CDMX, Mexico</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

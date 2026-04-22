@@ -1,0 +1,366 @@
+/* ============================================
+   El Contribuyente — Home Page Styles
+   ============================================ */
+
+/* ─────────────────────────────────────────
+   HERO SECTION
+   ───────────────────────────────────────── */
+.hero {
+  padding: 40px 0 48px;
+}
+
+.hero-card__featured-title a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.hero-card__featured-title a:hover {
+  color: var(--color-primary-dark);
+}
+
+/* ─────────────────────────────────────────
+   NEWS FEED SECTION
+   ───────────────────────────────────────── */
+.news-feed {
+  background: var(--color-bg);
+  padding: 0 0 var(--spacing-3xl);
+}
+
+.news-feed > .container {
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--spacing-2xl);
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--news-gap);
+}
+
+.news-grid--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.news-card__title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.news-card:hover .news-card__title a {
+  color: var(--color-primary-dark);
+}
+
+.news-feed__more {
+  text-align: center;
+  margin-top: var(--spacing-2xl);
+}
+
+/* ─────────────────────────────────────────
+   OPINION BLOCK
+   ───────────────────────────────────────── */
+.opinion-block {
+  background: var(--color-bg-alt);
+  padding: var(--spacing-3xl) 0;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.opinion-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap-lg);
+}
+
+.opinion-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  padding: var(--spacing-lg);
+  transition: box-shadow var(--transition-fast);
+}
+
+.opinion-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.opinion-card__header {
+  display: flex;
+  gap: var(--gap-md);
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-md);
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.opinion-card__avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.opinion-card__author {
+  font-size: 14px;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
+  margin: 0 0 2px;
+}
+
+.opinion-card__role {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.opinion-card__title {
+  font-family: var(--font-headline);
+  font-size: var(--text-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
+  line-height: var(--leading-snug);
+  margin: 0 0 var(--spacing-sm);
+}
+
+.opinion-card__title a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.opinion-card__title a:hover {
+  color: var(--color-primary-dark);
+}
+
+.opinion-card__excerpt {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: var(--leading-relaxed);
+  margin: 0;
+}
+
+/* ─────────────────────────────────────────
+   CATEGORY BLOCKS
+   ───────────────────────────────────────── */
+.category-block {
+  padding: var(--spacing-2xl) 0;
+}
+
+.category-block--gobierno {
+  background: var(--color-bg);
+}
+
+.category-block--empresas {
+  background: var(--color-bg-alt);
+  border-top: 1px solid var(--color-border);
+}
+
+.category-block__grid {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: var(--gap-xl);
+  align-items: start;
+}
+
+.news-card--horizontal {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 0;
+}
+
+.news-card--horizontal .news-card__image {
+  padding-bottom: 0;
+  height: 100%;
+}
+
+.news-card--horizontal .news-card__image img {
+  position: static;
+  height: 100%;
+}
+
+.category-block__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+}
+
+.category-block__item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-sm);
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-bottom: 1px solid var(--color-border-light);
+  text-decoration: none;
+  transition: background var(--transition-fast);
+}
+
+.category-block__item:last-child {
+  border-bottom: none;
+}
+
+.category-block__item:hover {
+  background: var(--color-bg);
+}
+
+.category-block__item h4 {
+  font-family: var(--font-headline);
+  font-size: var(--text-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+  line-height: var(--leading-normal);
+  margin: 0;
+  transition: color var(--transition-fast);
+}
+
+.category-block__item:hover h4 {
+  color: var(--color-primary-dark);
+}
+
+.category-block__date {
+  font-size: var(--text-xs);
+  color: var(--color-text-light);
+}
+
+/* ─────────────────────────────────────────
+   COURSES SECTION
+   ───────────────────────────────────────── */
+.courses-section {
+  background: var(--color-bg-alt);
+  padding: var(--spacing-3xl) 0;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap-lg);
+}
+
+.courses-section__more {
+  text-align: center;
+  margin-top: var(--spacing-xl);
+}
+
+.courses-section__link {
+  font-size: 13.5px;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-secondary);
+  letter-spacing: 0.02em;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-bottom: 1px solid var(--color-secondary);
+  padding-bottom: 2px;
+  transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.courses-section__link:hover {
+  color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+}
+
+/* ─────────────────────────────────────────
+   CALCULATORS SECTION
+   ───────────────────────────────────────── */
+.calculators-section {
+  padding: var(--spacing-3xl) 0;
+}
+
+.calculators-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap-lg);
+}
+
+/* ─────────────────────────────────────────
+   RESPONSIVE - TABLET
+   ───────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .news-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .opinion-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .opinion-grid .opinion-card:last-child {
+    grid-column: span 2;
+  }
+
+  .category-block__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .news-card--horizontal {
+    grid-template-columns: 1fr;
+  }
+
+  .news-card--horizontal .news-card__image {
+    padding-bottom: 50%;
+    position: relative;
+  }
+
+  .news-card--horizontal .news-card__image img {
+    position: absolute;
+    inset: 0;
+  }
+
+  .courses-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .courses-grid .course-card:last-child {
+    grid-column: span 2;
+  }
+
+  .calculators-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 24px 0 32px;
+  }
+
+  .opinion-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .opinion-grid .opinion-card:last-child {
+    grid-column: span 1;
+  }
+
+  .courses-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .courses-grid .course-card:last-child {
+    grid-column: span 1;
+  }
+}
+
+/* ─────────────────────────────────────────
+   RESPONSIVE - MOBILE
+   ───────────────────────────────────────── */
+@media (max-width: 480px) {
+  .news-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .calculators-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .category-block__list {
+    margin-top: var(--spacing-md);
+  }
+
+  .section-title__text {
+    font-size: var(--text-xl);
+  }
+}

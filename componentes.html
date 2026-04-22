@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Componentes — El Contribuyente Design System</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+
+  <style>
+    /* Component showcase styles */
+    .showcase {
+      padding: var(--spacing-3xl) 0;
+    }
+
+    .showcase__section {
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: var(--spacing-2xl) var(--container-padding);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .showcase__section:last-child {
+      border-bottom: none;
+    }
+
+    .showcase__title {
+      font-family: var(--font-headline);
+      font-size: var(--text-2xl);
+      font-weight: var(--font-weight-bold);
+      color: var(--color-text);
+      margin-bottom: var(--spacing-sm);
+    }
+
+    .showcase__desc {
+      font-size: var(--text-base);
+      color: var(--color-text-muted);
+      margin-bottom: var(--spacing-xl);
+    }
+
+    .showcase__grid {
+      display: grid;
+      gap: var(--gap-lg);
+    }
+
+    .showcase__grid--badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--gap-sm);
+    }
+
+    .showcase__grid--buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--gap-md);
+      align-items: center;
+    }
+
+    .showcase__grid--cards {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .showcase__sidebar-demo {
+      max-width: 320px;
+    }
+
+    .showcase__hero-demo {
+      max-width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      .showcase__grid--cards {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- ─────────────────────────────────────────
+       TOP BAR
+       ───────────────────────────────────────── -->
+  <div class="topbar">
+    <div class="topbar__date">
+      <span class="topbar__date-text">Lunes, 21 de abril de 2025</span>
+    </div>
+    <div class="topbar__ticker">
+      <div class="topbar__ticker-track">
+        <span class="topbar__ticker-item">
+          <span class="topbar__ticker-label">USD/MXN</span>
+          <span class="topbar__ticker-value">17.2340</span>
+          <span class="topbar__ticker-up">&#9650;</span>
+        </span>
+        <span class="topbar__ticker-item">
+          <span class="topbar__ticker-label">EUR/MXN</span>
+          <span class="topbar__ticker-value">18.9120</span>
+          <span class="topbar__ticker-down">&#9660;</span>
+        </span>
+        <span class="topbar__ticker-item">
+          <span class="topbar__ticker-label">UDI</span>
+          <span class="topbar__ticker-value">8.1234</span>
+          <span class="topbar__ticker-up">&#9650;</span>
+        </span>
+        <span class="topbar__ticker-item">
+          <span class="topbar__ticker-label">TIIE 28D</span>
+          <span class="topbar__ticker-value">10.50%</span>
+        </span>
+        <span class="topbar__ticker-item">
+          <span class="topbar__ticker-label">IPC BMV</span>
+          <span class="topbar__ticker-value">52,432</span>
+          <span class="topbar__ticker-up">&#9650;</span>
+        </span>
+        <span class="topbar__ticker-item">
+          <span class="topbar__ticker-label">WTI</span>
+          <span class="topbar__ticker-value">USD 82.14</span>
+          <span class="topbar__ticker-up">&#9650;</span>
+        </span>
+      </div>
+    </div>
+    <div class="topbar__live">
+      <span class="topbar__live-text">En vivo</span>
+      <div class="topbar__live-dot"></div>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────────
+       NAVBAR
+       ───────────────────────────────────────── -->
+  <header class="navbar">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__logo">
+        <img src="assets/logo.svg" alt="El Contribuyente" style="height: 36px;">
+      </a>
+
+      <nav class="navbar__nav">
+        <a href="#" class="navbar__link">Capacitacion</a>
+        <a href="#" class="navbar__link navbar__link--active">Ultima hora</a>
+        <a href="#" class="navbar__link">SAT</a>
+        <a href="#" class="navbar__link">Impuestos</a>
+        <a href="#" class="navbar__link">Finanzas Personales</a>
+        <a href="#" class="navbar__link">Calculadoras Fiscales</a>
+      </nav>
+
+      <div class="navbar__actions">
+        <div class="navbar__search">
+          <input type="text" class="navbar__search-input" placeholder="Buscar noticias..." style="display: none;">
+          <button class="navbar__search-btn" aria-label="Buscar">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+              <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+            </svg>
+          </button>
+        </div>
+        <a href="#newsletter" class="navbar__cta">Suscribirme gratis</a>
+      </div>
+
+      <button class="navbar__toggle" aria-label="Menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ─────────────────────────────────────────
+       BREADCRUMB
+       ───────────────────────────────────────── -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <div class="breadcrumb__inner">
+      <a href="index.html" class="breadcrumb__link">Inicio</a>
+      <span class="breadcrumb__separator">›</span>
+      <span class="breadcrumb__category" style="color: var(--color-cat-sat);">SAT</span>
+      <span class="breadcrumb__separator">›</span>
+      <span class="breadcrumb__current">Cuanto puedes deducir realmente en tu declaracion anual</span>
+    </div>
+  </nav>
+
+  <!-- ─────────────────────────────────────────
+       COMPONENTS SHOWCASE
+       ───────────────────────────────────────── -->
+  <main class="showcase">
+
+    <!-- BADGES -->
+    <section class="showcase__section">
+      <h2 class="showcase__title">Badges</h2>
+      <p class="showcase__desc">Badges de categoria para etiquetar articulos y contenido.</p>
+
+      <div class="showcase__grid showcase__grid--badges">
+        <span class="badge badge--sat">SAT</span>
+        <span class="badge badge--opinion">Opinion</span>
+        <span class="badge badge--empresas">Empresas</span>
+        <span class="badge badge--general">General</span>
+        <span class="badge badge--gobierno">Gobierno</span>
+        <span class="badge badge--impuestos">Impuestos</span>
+        <span class="badge badge--imss">IMSS</span>
+        <span class="badge badge--nominas">Nominas</span>
+        <span class="badge badge--contabilidad">Contabilidad</span>
+        <span class="badge badge--fiscal">Fiscal</span>
+        <span class="badge badge--cursos">Cursos</span>
+      </div>
+
+      <h3 style="margin-top: var(--spacing-xl); margin-bottom: var(--spacing-md); font-size: var(--text-lg); color: var(--color-text);">Badges pequenos</h3>
+      <div class="showcase__grid showcase__grid--badges">
+        <span class="badge badge--sm badge--sat">SAT</span>
+        <span class="badge badge--sm badge--opinion">Opinion</span>
+        <span class="badge badge--sm badge--empresas">Empresas</span>
+        <span class="badge badge--sm badge--basico">Basico</span>
+        <span class="badge badge--sm badge--intermedio">Intermedio</span>
+        <span class="badge badge--sm badge--avanzado">Avanzado</span>
+      </div>
+    </section>
+
+    <!-- BUTTONS -->
+    <section class="showcase__section">
+      <h2 class="showcase__title">Botones</h2>
+      <p class="showcase__desc">Botones para acciones primarias, secundarias y de contorno.</p>
+
+      <div class="showcase__grid showcase__grid--buttons">
+        <button class="btn btn--primary">Suscribirme gratis</button>
+        <button class="btn btn--secondary">Ver mas noticias</button>
+        <button class="btn btn--outline">Filtrar</button>
+      </div>
+    </section>
+
+    <!-- SECTION TITLE -->
+    <section class="showcase__section">
+      <h2 class="showcase__title">Titulos de Seccion</h2>
+      <p class="showcase__desc">Componente para encabezados de secciones principales.</p>
+
+      <div class="section-title">
+        <div class="section-title__header">
+          <div class="section-title__accent"></div>
+          <h2 class="section-title__text">Ultimas noticias</h2>
+        </div>
+      </div>
+
+      <div class="section-title">
+        <div class="section-title__header">
+          <div class="section-title__accent"></div>
+          <h2 class="section-title__text">Cursos y Capacitacion</h2>
+        </div>
+        <p class="section-title__sub">Capacitacion especializada para contadores, administradores y empresarios mexicanos.</p>
+      </div>
+
+      <div class="section-label">
+        <span class="section-label__text">Noticias destacadas</span>
+        <div class="section-label__line"></div>
+      </div>
+    </section>
+
+    <!-- NEWS CARDS -->
+    <section class="showcase__section">
+      <h2 class="showcase__title">Tarjetas de Noticia</h2>
+      <p class="showcase__desc">Tarjetas para mostrar articulos en grids de noticias.</p>
+
+      <div class="showcase__grid showcase__grid--cards">
+        <article class="news-card">
+          <div class="news-card__image">
+            <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=680&h=400&fit=crop&auto=format&q=80" alt="Articulo">
+          </div>
+          <div class="news-card__content">
+            <div class="news-card__meta">
+              <span class="badge badge--sm badge--sat">SAT</span>
+              <span class="news-card__date">13 abr</span>
+            </div>
+            <h3 class="news-card__title">SAT precarga mal deducciones y predial en declaracion anual</h3>
+            <p class="news-card__excerpt">El SAT esta precargando cifras erroneas en deducciones y predial para arrendadores. Asi puedes detectar el error.</p>
+            <div class="news-card__footer">
+              <span class="news-card__author">Redaccion EC</span>
+              <span class="news-card__separator">·</span>
+              <span class="news-card__readtime">5 min lectura</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="news-card">
+          <div class="news-card__image">
+            <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=680&h=400&fit=crop&auto=format&q=80" alt="Articulo">
+          </div>
+          <div class="news-card__content">
+            <div class="news-card__meta">
+              <span class="badge badge--sm badge--general">General</span>
+              <span class="news-card__date">13 abr</span>
+            </div>
+            <h3 class="news-card__title">Como deducir tu ahorro para el retiro ante el SAT</h3>
+            <p class="news-card__excerpt">El SAT permite deducir aportaciones a planes de retiro y cuentas de ahorro especiales.</p>
+            <div class="news-card__footer">
+              <span class="news-card__author">Redaccion EC</span>
+              <span class="news-card__separator">·</span>
+              <span class="news-card__readtime">6 min lectura</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="news-card">
+          <div class="news-card__image">
+            <img src="https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=680&h=400&fit=crop&auto=format&q=80" alt="Articulo">
+          </div>
+          <div class="news-card__content">
+            <div class="news-card__meta">
+              <span class="badge badge--sm badge--impuestos">Impuestos</span>
+              <span class="news-card__date">10 abr</span>
+            </div>
+            <h3 class="news-card__title">No aparecio tu acuse en la declaracion anual?</h3>
+            <p class="news-card__excerpt">Usuarios reportan que al enviar su declaracion anual, el sistema del SAT no muestra el acuse.</p>
+            <div class="news-card__footer">
+              <span class="news-card__author">Redaccion EC</span>
+              <span class="news-card__separator">·</span>
+              <span class="news-card__readtime">4 min lectura</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SIDEBAR COMPONENTS -->
+    <section class="showcase__section">
+      <h2 class="showcase__title">Componentes de Sidebar</h2>
+      <p class="showcase__desc">Elementos para la columna lateral: anuncios, noticias relacionadas, newsletter.</p>
+
+      <div style="display: grid; grid-template-columns: repeat(3, 320px); gap: var(--gap-xl); overflow-x: auto;">
+
+        <!-- Ad Block -->
+        <div class="ad-block">
+          <div class="ad-block__line"></div>
+          <span class="ad-block__label">Publicidad</span>
+          <span class="ad-block__size">300 × 250</span>
+        </div>
+
+        <!-- Related Box -->
+        <div class="related-box">
+          <div class="related-box__header">
+            <div class="related-box__accent"></div>
+            <h3 class="related-box__title">Noticias relacionadas</h3>
+          </div>
+          <div>
+            <a href="#" class="news-card-sm">
+              <div class="news-card-sm__image">
+                <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=120&h=120&fit=crop&auto=format&q=80" alt="">
+              </div>
+              <div class="news-card-sm__content">
+                <span class="badge badge--sm badge--general">General</span>
+                <h4 class="news-card-sm__title">Gastos medicos deducibles: requisitos y limites</h4>
+                <span class="news-card-sm__date">17 abr</span>
+              </div>
+            </a>
+            <a href="#" class="news-card-sm">
+              <div class="news-card-sm__image">
+                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=120&h=120&fit=crop&auto=format&q=80" alt="">
+              </div>
+              <div class="news-card-sm__content">
+                <span class="badge badge--sm badge--sat">SAT</span>
+                <h4 class="news-card-sm__title">Tienes un adeudo con el SAT? Esto cambia</h4>
+                <span class="news-card-sm__date">15 abr</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Mini Newsletter -->
+        <div class="mini-newsletter">
+          <div class="mini-newsletter__accent"></div>
+          <div class="mini-newsletter__pattern"></div>
+          <div class="mini-newsletter__content">
+            <div class="mini-newsletter__label">Newsletter semanal</div>
+            <h3 class="mini-newsletter__title">Recibe las reformas fiscales antes que nadie</h3>
+            <p class="mini-newsletter__text">45,000+ contadores y empresarios ya estan suscritos.</p>
+            <form class="mini-newsletter__form">
+              <input type="email" class="mini-newsletter__input" placeholder="tu@correo.com" required>
+              <button type="submit" class="mini-newsletter__btn">Suscribirme gratis</button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PAGINATION -->
+    <section class="showcase__section">
+      <h2 class="showcase__title">Paginacion</h2>
+      <p class="showcase__desc">Navegacion entre paginas de resultados.</p>
+
+      <nav class="pagination" aria-label="Paginacion">
+        <button class="pagination__btn pagination__btn--disabled" aria-disabled="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M15 18l-6-6 6-6"/>
+          </svg>
+        </button>
+        <button class="pagination__btn pagination__btn--active">1</button>
+        <button class="pagination__btn">2</button>
+        <button class="pagination__btn">3</button>
+        <span class="pagination__ellipsis">...</span>
+        <button class="pagination__btn">12</button>
+        <button class="pagination__btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 18l6-6-6-6"/>
+          </svg>
+        </button>
+      </nav>
+    </section>
+
+    <!-- TAGS -->
+    <section class="showcase__section">
+      <h2 class="showcase__title">Tags</h2>
+      <p class="showcase__desc">Etiquetas para articulos y filtros.</p>
+
+      <div class="showcase__grid showcase__grid--badges">
+        <span class="tag">#Declaracion Anual</span>
+        <span class="tag">#ISR</span>
+        <span class="tag">#Deducciones Personales</span>
+        <span class="tag">#SAT</span>
+        <span class="tag">#Articulo 151</span>
+      </div>
+    </section>
+
+    <!-- SHARE BUTTONS -->
+    <section class="showcase__section">
+      <h2 class="showcase__title">Botones de Compartir</h2>
+      <p class="showcase__desc">Botones para compartir articulos en redes sociales.</p>
+
+      <div class="share-bar">
+        <span class="share-bar__label">Compartir</span>
+        <button class="share-btn" data-network="twitter">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.259 5.631 5.905-5.631z"/></svg>
+          <span class="share-btn__label">Twitter</span>
+        </button>
+        <button class="share-btn" data-network="facebook">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          <span class="share-btn__label">Facebook</span>
+        </button>
+        <button class="share-btn" data-network="whatsapp">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+          <span class="share-btn__label">WhatsApp</span>
+        </button>
+        <button class="share-btn" data-network="linkedin">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          <span class="share-btn__label">LinkedIn</span>
+        </button>
+        <button class="share-btn" data-network="copy">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+          <span class="share-btn__label">Copiar enlace</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- AUTHOR BIO -->
+    <section class="showcase__section">
+      <h2 class="showcase__title">Bio de Autor</h2>
+      <p class="showcase__desc">Tarjeta con informacion del autor al final de articulos.</p>
+
+      <div class="author-bio" style="max-width: 700px;">
+        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=120&h=120&fit=crop&auto=format&q=80" alt="Redaccion EC" class="author-bio__avatar">
+        <div class="author-bio__content">
+          <div class="author-bio__name">Redaccion EC</div>
+          <div class="author-bio__role">Equipo editorial de El Contribuyente</div>
+          <p class="author-bio__text">El equipo editorial de El Contribuyente cubre diariamente las novedades del SAT, el IMSS y el entorno fiscal mexicano. Mas de 8 anos informando a contadores, administradores y empresarios del pais.</p>
+          <div class="author-bio__social">
+            <a href="#" class="author-bio__social-link" aria-label="Twitter">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.259 5.631 5.905-5.631z"/></svg>
+            </a>
+            <a href="#" class="author-bio__social-link" aria-label="LinkedIn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COURSE CARD -->
+    <section class="showcase__section">
+      <h2 class="showcase__title">Tarjeta de Curso</h2>
+      <p class="showcase__desc">Tarjetas para mostrar cursos y capacitaciones.</p>
+
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--gap-lg); max-width: 100%;">
+        <article class="course-card">
+          <div class="course-card__image">
+            <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=700&h=380&fit=crop&auto=format&q=80" alt="Curso">
+            <span class="course-card__level badge badge--sm badge--intermedio">Intermedio</span>
+          </div>
+          <div class="course-card__content">
+            <h3 class="course-card__title">Declaracion Anual de Personas Fisicas 2026</h3>
+            <div class="course-card__instructor">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/>
+              </svg>
+              <span>CPC Maria Fernandez Garcia</span>
+            </div>
+            <div class="course-card__duration">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+              </svg>
+              <span>8 horas</span>
+            </div>
+            <div class="course-card__footer">
+              <div>
+                <span class="course-card__price-label">Precio</span>
+                <span class="course-card__price">$1,299 <span class="course-card__price-currency">MXN</span></span>
+              </div>
+              <button class="btn btn--primary" style="padding: 10px 20px; font-size: 13px;">Inscribirme</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="course-card">
+          <div class="course-card__image">
+            <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=700&h=380&fit=crop&auto=format&q=80" alt="Curso">
+            <span class="course-card__level badge badge--sm badge--basico">Basico</span>
+          </div>
+          <div class="course-card__content">
+            <h3 class="course-card__title">CFDI 4.0: Facturacion Electronica desde Cero</h3>
+            <div class="course-card__instructor">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/>
+              </svg>
+              <span>Mtro. Alejandro Cruz Morales</span>
+            </div>
+            <div class="course-card__duration">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+              </svg>
+              <span>6 horas</span>
+            </div>
+            <div class="course-card__footer">
+              <div>
+                <span class="course-card__price-label">Precio</span>
+                <span class="course-card__price">$899 <span class="course-card__price-currency">MXN</span></span>
+              </div>
+              <button class="btn btn--primary" style="padding: 10px 20px; font-size: 13px;">Inscribirme</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="course-card">
+          <div class="course-card__image">
+            <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=700&h=380&fit=crop&auto=format&q=80" alt="Curso">
+            <span class="course-card__level badge badge--sm badge--avanzado">Avanzado</span>
+          </div>
+          <div class="course-card__content">
+            <h3 class="course-card__title">RESICO Avanzado: Estrategias de Optimizacion Fiscal</h3>
+            <div class="course-card__instructor">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/>
+              </svg>
+              <span>CPA Jorge Sanchez Ruiz</span>
+            </div>
+            <div class="course-card__duration">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+              </svg>
+              <span>10 horas</span>
+            </div>
+            <div class="course-card__footer">
+              <div>
+                <span class="course-card__price-label">Precio</span>
+                <span class="course-card__price">$1,599 <span class="course-card__price-currency">MXN</span></span>
+              </div>
+              <button class="btn btn--primary" style="padding: 10px 20px; font-size: 13px;">Inscribirme</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CALCULATOR CARDS -->
+    <section class="showcase__section">
+      <h2 class="showcase__title">Tarjetas de Calculadora</h2>
+      <p class="showcase__desc">Accesos rapidos a las calculadoras fiscales.</p>
+
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--gap-lg);">
+        <article class="calc-card">
+          <div class="calc-card__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2L2 7l10 5 10-5-10-5"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
+            </svg>
+          </div>
+          <div class="calc-card__content">
+            <h3 class="calc-card__name">Calculo de ISR</h3>
+            <p class="calc-card__desc">Personas fisicas y morales</p>
+          </div>
+        </article>
+
+        <article class="calc-card">
+          <div class="calc-card__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/>
+            </svg>
+          </div>
+          <div class="calc-card__content">
+            <h3 class="calc-card__name">Desglose de IVA</h3>
+            <p class="calc-card__desc">Traslado y acreditamiento</p>
+          </div>
+        </article>
+
+        <article class="calc-card">
+          <div class="calc-card__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 7H4a2 2 0 00-2 2v10a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z"/><path d="M16 3H8L6 7h12l-2-4z"/>
+            </svg>
+          </div>
+          <div class="calc-card__content">
+            <h3 class="calc-card__name">Cuotas IMSS</h3>
+            <p class="calc-card__desc">Patron y trabajador</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ─────────────────────────────────────────
+       NEWSLETTER SECTION
+       ───────────────────────────────────────── -->
+  <section class="newsletter" id="newsletter">
+    <div class="newsletter__accent"></div>
+    <div class="newsletter__pattern"></div>
+    <div class="newsletter__content">
+      <div class="newsletter__badge">
+        <div class="newsletter__badge-dot"></div>
+        <span class="newsletter__badge-text">Newsletter semanal</span>
+      </div>
+
+      <h2 class="newsletter__title">Recibe las reformas fiscales<br>antes que nadie</h2>
+
+      <p class="newsletter__text">
+        Mas de <strong class="newsletter__highlight">45,000 contadores y empresarios</strong> reciben cada semana el resumen de novedades del SAT, cambios en el IMSS y actualizaciones fiscales que impactan su negocio.
+      </p>
+
+      <form class="newsletter__form">
+        <input type="email" class="newsletter__input" placeholder="tu@correo.com" required>
+        <button type="submit" class="newsletter__submit">Suscribirme gratis</button>
+      </form>
+
+      <p class="newsletter__disclaimer">Sin spam. Cancela cuando quieras. Aviso de privacidad aplicable.</p>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────
+       FOOTER
+       ───────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="footer__main">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <img src="assets/logo.svg" alt="El Contribuyente" class="footer__logo">
+          <p class="footer__desc">El portal de referencia para contadores, administradores y empresarios mexicanos. Mas de 8 anos cubriendo las novedades del SAT, IMSS y el entorno fiscal nacional.</p>
+          <div class="footer__social">
+            <a href="#" class="footer__social-link" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="Twitter">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.259 5.631 5.905-5.631z"/></svg>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.96A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor"/></svg>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer__links">
+          <div>
+            <h4 class="footer__column-title">Categorias</h4>
+            <ul class="footer__column-list">
+              <li><a href="#" class="footer__link">SAT</a></li>
+              <li><a href="#" class="footer__link">IMSS</a></li>
+              <li><a href="#" class="footer__link">Nominas</a></li>
+              <li><a href="#" class="footer__link">Contabilidad</a></li>
+              <li><a href="#" class="footer__link">Fiscal</a></li>
+              <li><a href="#" class="footer__link">Cursos</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer__column-title">Herramientas</h4>
+            <ul class="footer__column-list">
+              <li><a href="#" class="footer__link">Calculadora ISR</a></li>
+              <li><a href="#" class="footer__link">Calculadora IVA</a></li>
+              <li><a href="#" class="footer__link">Cuotas IMSS</a></li>
+              <li><a href="#" class="footer__link">Calculadora PTU</a></li>
+              <li><a href="#" class="footer__link">UMA 2025</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer__column-title">Portal</h4>
+            <ul class="footer__column-list">
+              <li><a href="#" class="footer__link">Quienes somos</a></li>
+              <li><a href="#" class="footer__link">Anunciate</a></li>
+              <li><a href="#" class="footer__link">Escribe para nosotros</a></li>
+              <li><a href="#" class="footer__link">Contacto</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer__column-title">Legal</h4>
+            <ul class="footer__column-list">
+              <li><a href="#" class="footer__link">Aviso de privacidad</a></li>
+              <li><a href="#" class="footer__link">Terminos de uso</a></li>
+              <li><a href="#" class="footer__link">Politica de cookies</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="footer__bottom-inner">
+        <span class="footer__copyright">© 2025 El Contribuyente. Todos los derechos reservados.</span>
+        <span class="footer__location">CDMX, Mexico</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

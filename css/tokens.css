@@ -1,0 +1,253 @@
+/* ============================================
+   El Contribuyente — Design Tokens
+   Sistema de diseño extraído de los archivos JSX
+   ============================================ */
+
+:root {
+  /* ─────────────────────────────────────────
+     COLORES PRIMARIOS
+     ───────────────────────────────────────── */
+  --color-primary: #fba61a;           /* Amber - color de marca principal */
+  --color-primary-dark: #d4880a;      /* Amber oscuro para hover states */
+  --color-primary-light: #fff8ec;     /* Amber muy claro para fondos */
+
+  /* ─────────────────────────────────────────
+     COLORES SECUNDARIOS
+     ───────────────────────────────────────── */
+  --color-secondary: #1a2744;         /* Navy - color secundario */
+  --color-secondary-light: #243357;   /* Navy claro para bordes oscuros */
+
+  /* ─────────────────────────────────────────
+     COLORES DE FONDO
+     ───────────────────────────────────────── */
+  --color-bg: #faf9f6;                /* Fondo principal (crema muy suave) */
+  --color-bg-alt: #f4f1ec;            /* Fondo alternativo/gris */
+  --color-surface: #ffffff;           /* Superficie de tarjetas */
+  --color-surface-hover: #fdfcf9;     /* Superficie en hover */
+
+  /* ─────────────────────────────────────────
+     COLORES DE TEXTO
+     ───────────────────────────────────────── */
+  --color-text: #1e1c18;              /* Texto principal */
+  --color-text-muted: #6b6458;        /* Texto secundario */
+  --color-text-light: #9c9287;        /* Texto terciario/meta info */
+
+  /* ─────────────────────────────────────────
+     COLORES DE BORDE
+     ───────────────────────────────────────── */
+  --color-border: #e2ddd8;            /* Borde principal */
+  --color-border-light: #ede9e4;      /* Borde sutil */
+
+  /* ─────────────────────────────────────────
+     COLORES DE ESTADO
+     ───────────────────────────────────────── */
+  --color-success: #4caf7d;           /* Verde éxito */
+  --color-success-bg: rgba(76, 175, 125, 0.15);
+  --color-success-border: rgba(76, 175, 125, 0.4);
+  --color-error: #e05555;             /* Rojo error */
+
+  /* ─────────────────────────────────────────
+     COLORES DE CATEGORÍAS (BADGES)
+     ───────────────────────────────────────── */
+  --color-cat-sat: #fba61a;
+  --color-cat-sat-text: #6b3d00;
+
+  --color-cat-opinion: #1a2744;
+  --color-cat-opinion-text: #ffffff;
+
+  --color-cat-empresas: #1e6e5e;
+  --color-cat-empresas-text: #ffffff;
+
+  --color-cat-general: #5b2c6f;
+  --color-cat-general-text: #ffffff;
+
+  --color-cat-gobierno: #8b3a1a;
+  --color-cat-gobierno-text: #ffffff;
+
+  --color-cat-impuestos: #1a4a7a;
+  --color-cat-impuestos-text: #ffffff;
+
+  --color-cat-imss: #1a3a6b;
+  --color-cat-imss-text: #ffffff;
+
+  --color-cat-nominas: #1e6e5e;
+  --color-cat-nominas-text: #ffffff;
+
+  --color-cat-contabilidad: #5b2c6f;
+  --color-cat-contabilidad-text: #ffffff;
+
+  --color-cat-fiscal: #8b1a1a;
+  --color-cat-fiscal-text: #ffffff;
+
+  --color-cat-cursos: #1a4a7a;
+  --color-cat-cursos-text: #ffffff;
+
+  /* ─────────────────────────────────────────
+     NIVELES DE CURSO
+     ───────────────────────────────────────── */
+  --color-level-basico: #1e6e5e;
+  --color-level-intermedio: #1a4a7a;
+  --color-level-avanzado: #8b1a1a;
+
+  /* ─────────────────────────────────────────
+     COLORES DE FOOTER
+     ───────────────────────────────────────── */
+  --color-footer-bg: #18181a;
+  --color-footer-text: rgba(255, 255, 255, 0.75);
+  --color-footer-text-muted: rgba(255, 255, 255, 0.55);
+  --color-footer-text-dim: rgba(255, 255, 255, 0.35);
+  --color-footer-border: rgba(255, 255, 255, 0.07);
+
+  /* ─────────────────────────────────────────
+     TIPOGRAFÍAS
+     ───────────────────────────────────────── */
+  --font-headline: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-body: 'DM Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+  /* ─────────────────────────────────────────
+     ESCALA TIPOGRÁFICA
+     ───────────────────────────────────────── */
+  --text-xs: 0.6875rem;    /* 11px - badges, meta pequeño */
+  --text-sm: 0.8125rem;    /* 13px - meta info, links */
+  --text-base: 0.9375rem;  /* 15px - cuerpo de texto */
+  --text-lg: 1.0625rem;    /* 17px - títulos de tarjeta */
+  --text-xl: 1.25rem;      /* 20px - subtítulos de sección */
+  --text-2xl: 1.5rem;      /* 24px - títulos de sección */
+  --text-3xl: 2rem;        /* 32px - título featured */
+  --text-4xl: 2.375rem;    /* 38px - título de artículo */
+  --text-5xl: 2.25rem;     /* 36px - newsletter headline */
+
+  /* ─────────────────────────────────────────
+     PESOS TIPOGRÁFICOS
+     ───────────────────────────────────────── */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  /* ─────────────────────────────────────────
+     ALTURAS DE LÍNEA
+     ───────────────────────────────────────── */
+  --leading-tight: 1.18;
+  --leading-snug: 1.25;
+  --leading-normal: 1.35;
+  --leading-relaxed: 1.55;
+  --leading-loose: 1.65;
+
+  /* ─────────────────────────────────────────
+     ESPACIADO (rem basado en 16px)
+     ───────────────────────────────────────── */
+  --spacing-xs: 0.25rem;   /* 4px */
+  --spacing-sm: 0.5rem;    /* 8px */
+  --spacing-md: 1rem;      /* 16px */
+  --spacing-lg: 1.5rem;    /* 24px */
+  --spacing-xl: 2rem;      /* 32px */
+  --spacing-2xl: 3rem;     /* 48px */
+  --spacing-3xl: 4rem;     /* 64px */
+  --spacing-4xl: 4.5rem;   /* 72px */
+
+  /* ─────────────────────────────────────────
+     GAPS (espaciado entre elementos)
+     ───────────────────────────────────────── */
+  --gap-xs: 6px;
+  --gap-sm: 8px;
+  --gap-md: 12px;
+  --gap-lg: 24px;
+  --gap-xl: 32px;
+  --gap-2xl: 48px;
+
+  /* ─────────────────────────────────────────
+     LAYOUT
+     ───────────────────────────────────────── */
+  --container-max: 1280px;
+  --container-padding: 32px;
+  --sidebar-width: 320px;
+  --content-gap: 48px;
+
+  /* Grid de noticias */
+  --news-columns: 3;
+  --news-gap: 24px;
+
+  /* Hero grid */
+  --hero-secondary-width: 380px;
+
+  /* Footer grid */
+  --footer-brand-width: 280px;
+  --footer-columns: 4;
+
+  /* ─────────────────────────────────────────
+     COMPONENTES - NAVBAR
+     ───────────────────────────────────────── */
+  --navbar-height: 68px;
+  --topbar-height: 34px;
+
+  /* ─────────────────────────────────────────
+     BORDER RADIUS
+     ───────────────────────────────────────── */
+  --radius-xs: 2px;        /* Badges */
+  --radius-sm: 4px;        /* Botones, inputs */
+  --radius-md: 6px;        /* Tarjetas pequeñas */
+  --radius-lg: 8px;        /* Paneles */
+  --radius-full: 9999px;   /* Pills, avatares */
+
+  /* ─────────────────────────────────────────
+     SOMBRAS
+     ───────────────────────────────────────── */
+  --shadow-sm: 0 1px 4px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 4px 20px rgba(0, 0, 0, 0.07);
+  --shadow-xl: 0 6px 24px rgba(0, 0, 0, 0.09);
+  --shadow-navbar: 0 2px 16px rgba(0, 0, 0, 0.08);
+  --shadow-panel: 0 8px 32px rgba(0, 0, 0, 0.15);
+
+  /* ─────────────────────────────────────────
+     TRANSICIONES
+     ───────────────────────────────────────── */
+  --transition-fast: 0.15s ease;
+  --transition-base: 0.2s ease;
+  --transition-slow: 0.3s ease;
+
+  /* ─────────────────────────────────────────
+     Z-INDEX
+     ───────────────────────────────────────── */
+  --z-dropdown: 50;
+  --z-sticky: 80;
+  --z-navbar: 100;
+  --z-modal: 200;
+  --z-tooltip: 300;
+
+  /* ─────────────────────────────────────────
+     BREAKPOINTS (para referencia)
+     En CSS usamos @media directamente
+     ───────────────────────────────────────── */
+  /* --bp-mobile: 480px; */
+  /* --bp-tablet: 768px; */
+  /* --bp-desktop: 1024px; */
+  /* --bp-wide: 1280px; */
+}
+
+/* ─────────────────────────────────────────
+   MEDIA QUERIES CUSTOM PROPERTIES
+   Ajustes responsivos de tokens
+   ───────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  :root {
+    --container-padding: 20px;
+    --news-columns: 2;
+    --text-3xl: 1.75rem;   /* 28px */
+    --text-4xl: 2rem;      /* 32px */
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --container-padding: 16px;
+    --news-columns: 1;
+    --text-2xl: 1.25rem;   /* 20px */
+    --text-3xl: 1.5rem;    /* 24px */
+    --text-4xl: 1.75rem;   /* 28px */
+    --navbar-height: 56px;
+  }
+}
