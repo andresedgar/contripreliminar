@@ -31,7 +31,7 @@ elcontribuyente-design/
 ├── js/
 │   └── main.js             # Interacciones minimas
 ├── assets/
-│   └── logo.svg
+│   └── logo-contribuyente.png
 ├── netlify.toml            # Configuracion de Netlify
 └── README.md
 ```
